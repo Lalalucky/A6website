@@ -19,9 +19,9 @@ axios.interceptors.response.use((data) => {
      // 数据异常统一处理 例如
     if (err.response.status === 504 || err.response.status === 404) {
       console.log('服务器被吃了')
-    } else if(err.response.status === 403) {
+    } else if (err.response.status === 403) {
       console.log('权限不足,请联系管理员')
-    } else{
+    } else {
       console.log('未知错误')
     }
     return Promise.resolve(err)

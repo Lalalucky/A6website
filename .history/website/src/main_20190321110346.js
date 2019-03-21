@@ -12,19 +12,21 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
 //过滤器
-import filters from '@/filter';
+import filter from '@/filter';
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
 
 // 图片懒加载
 import VueLazyLoad from 'vue-lazyload';
-Vue.use(VueLazyLoad, {
-  //   preLoad: 1.3,
-  error: require('./assets/images/失败.png'),
-  loading: require('./assets/images/等待.gif'),
-  //   attempt: 1
-});
+Vue.use(VueLazyLoad
+  , {
+    //   preLoad: 1.3,
+    error: require('./assets/images/失败.png'),
+    loading: require('./assets/images/等待.gif'),
+    //   attempt: 1
+  }
+);
 
 //字体
 import "./assets/iconfont/iconfont.css";
@@ -55,29 +57,6 @@ router.beforeEach((to, from, next) => {
   // next();
 });
 
-//引入发送请求
-import axios from 'axios'
-Vue.prototype.axios = axios;
-import {
-  postRequest,
-  getRequest,
-  uploadFileRequest,
-  putRequest,
-  deleteRequest
-} from './request.js';
-Vue.prototype.postRequest = postRequest;
-Vue.prototype.getRequest = getRequest;
-Vue.prototype.uploadFileRequest = uploadFileRequest;
-Vue.prototype.putRequest = putRequest;
-Vue.prototype.deleteRequest = deleteRequest;
-// 过期时间
-import {
-  setLocalStorage,
-  getLocalStorage,
-  toArr
-} from './overtime.js';
-Vue.prototype.setLocalStorage = setLocalStorage;
-Vue.prototype.getLocalStorage = getLocalStorage;
 
 Vue.config.productionTip = false
 

@@ -34,11 +34,9 @@
     },
     "extends": [
       "plugin:vue/essential",
-      "eslint:recommended"
+      "eslint:disabled"
     ],
-    "rules": {
-      "no-console":0
-    },
+    "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
     }

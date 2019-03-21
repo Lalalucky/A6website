@@ -1,24 +1,39 @@
 <template>
   <div id="app">
-    <Top></Top>
+    <nav></nav>
+    <router-view v-if="isRouterAlive"/>
+    <!--search,goodsDetial-->
   </div>
 </template>
 
 <script>
-import Top from "./components/top.vue";
+import nav from "./components/nva.vue";
   export default {
   name: "app",
+  provide(){
+    return{
+      reload:this.reload
+    }
+  },
   data(){
     return{
       isRouterAlive:true
     }
   },
   components: {
-    Top
+    nav
   },
   mounted() {
 
   },
+  methods:{
+    reload(){
+      this.isRouterAlive = false
+      this.$nextTick(function(){
+        this.isRouterAlive = true
+      })
+    }
+  }
 };
 </script>
 

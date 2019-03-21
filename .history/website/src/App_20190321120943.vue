@@ -31,4 +31,7 @@ import Top from "./components/top.vue";
   @media screen and(max-width: 1200px) {
     overflow-x: scroll;
   }
+  head{
+    display: block;
+  }
 </style>

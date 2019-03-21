@@ -12,7 +12,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
 //过滤器
-import filters from '@/filter';
+import filter from '@/filter';
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
