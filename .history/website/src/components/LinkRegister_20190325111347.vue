@@ -1,0 +1,19 @@
+<template>
+   <div class="register">
+       <h1>距离您所需要的服务只差一步</h1>
+       <div>免费体验</div>
+   </div>
+</template>
+
+<script>
+export default {
+   name: 'register',
+   data() {
+       return {}
+   },
+  components: {}
+}
+</script>
+
+<style scoped lang="less">
+</style>
