@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <div class="headerTop" @mouseleave="destoryIndex()">
+        <div class="headerTop" @mouseleave="getIndex(0)">
             <el-row>
                 <el-col :span="4">
                     <router-link tag="div" to='/'>
@@ -11,39 +11,39 @@
                     <el-row class="navs" type="flex">
                         <el-col :span="3">
                             <router-link tag="div" to="/" class="nav">
-                                <div @mouseover="getIndex(0,$event)" :class="[this.index==0?'underline':'']">首页</div>
+                                <div @mouseover="getIndex(0)" :class="[this.index==0?'underline':'']">首页</div>
                             </router-link>
                         </el-col>
                         <el-col :span="3">
                             <router-link tag="div" to="/solutions/index" class="nav">
-                                <div @mouseover="getIndex(1,$event)" :class="[this.index==1?'underline':'']">解决方案</div>
+                                <div @mouseover="getIndex(1)" :class="[this.index==1?'underline':'']">解决方案</div>
                             </router-link>
                         </el-col>
                         <el-col :span="3">
                             <router-link tag="div" to="/productsIntro/index" class="nav">
-                            <!-- <transition name='navbar'> -->
-                                <div @mouseover="getIndex(2,$event)" :class="[this.index==2?'underline':'']">产品介绍</div>
-                            <!-- </transition> -->
+                            <transition name='productsIntro'>
+                                <div @mouseover="getIndex(2)" :class="[this.index==2?'underline':'']">产品介绍</div>
+                            </transition>
                             </router-link>
                         </el-col>
                         <el-col :span="3">
                             <router-link tag="div" to="/academe/index" class="nav">
-                                <div @mouseover="getIndex(3,$event)" :class="[this.index==3?'underline':'']">易学苑</div>
+                                <div @mouseover="getIndex(3)" :class="[this.index==3?'underline':'']">易学苑</div>
                             </router-link>
                         </el-col>
                         <el-col :span="3">
                             <router-link tag="div" to="/cooprations/index" class="nav">
-                                <div @mouseover="getIndex(4,$event)" :class="[this.index==4?'underline':'']">合作案例</div>
+                                <div @mouseover="getIndex(4)" :class="[this.index==4?'underline':'']">合作案例</div>
                             </router-link>
                         </el-col>
                         <el-col :span="3">
                             <router-link tag="div" to="/server/index" class="nav">
-                                <div @mouseover="getIndex(5,$event)" :class="[this.index==5?'underline':'']">服务支持</div>
+                                <div @mouseover="getIndex(5)" :class="[this.index==5?'underline':'']">服务支持</div>
                             </router-link>
                         </el-col>
                         <el-col :span="3">
                             <router-link tag="div" to="/contactUs/index" class="nav">
-                                <div @mouseover="getIndex(6,$event)" :class="[this.index==6?'underline':'']">联系我们</div>
+                                <div @mouseover="getIndex(6)" :class="[this.index==6?'underline':'']">联系我们</div>
                             </router-link>
                         </el-col>
                     </el-row>
@@ -61,10 +61,10 @@
             </el-row>
             <transition
                 name="fade"
-                enter-active-class="animated fadeIn"
-                leave-active-class="animated fadeOut"
+                enter-active-class="animated pulse"
+                leave-active-class="animated fadeOutDown"
             >
-                <div class="solutions" ref="navbar" v-show="this.needShow==1" animate-delay="1000ms">
+                <div class="solutions" v-show="this.needShow==1" animate-delay="0s">
                     <div class="sixDisp">
                         <div @click="solutions(1)">营销传播</div>
                         <div @click="solutions(2)">招生转化</div>
@@ -85,8 +85,7 @@ export default {
     props:['index'],
     data() {
         return {
-            needShow: 0,
-            nowIndex:0
+            needShow: 0
         };
     },
     mounted(){
@@ -96,13 +95,8 @@ export default {
         
     },
     methods: {
-        getIndex(index,event) {
+        getIndex(index) {
             this.needShow = index;
-            // let el = event.currentTarget;
-            // el.style.borderBottom = "3px solid red";
-        },
-        destoryIndex(){
-            this.needShow==1?this.needShow=-1:this.needShow = this.nowIndex;
         },
         goToLogin() {
             this.$router.push({
@@ -173,7 +167,7 @@ header {
                 color: #000000;
             }
             div{
-                width:80%;
+                width: 50%;
                 height: 60px;
                 margin: 0 auto;
                 box-sizing: border-box;
@@ -183,6 +177,12 @@ header {
                 &:hover{
                     border-bottom: 3px solid #ffffff;
                 }
+            }
+            .productsIntro-enter-active,.productsIntro-leave-active{
+                transition:all 2s;
+            }
+            .productsIntro-enter,.productsIntro-leave-to{
+                margin-left: 100px;
             }
         }
         .fade-enter-active{

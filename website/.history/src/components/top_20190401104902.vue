@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <div class="headerTop" @mouseleave="destoryIndex()">
+        <div class="headerTop" @mouseleave="destoryList()">
             <el-row>
                 <el-col :span="4">
                     <router-link tag="div" to='/'>
@@ -61,10 +61,10 @@
             </el-row>
             <transition
                 name="fade"
-                enter-active-class="animated fadeIn"
-                leave-active-class="animated fadeOut"
+                enter-active-class="animated pulse"
+                leave-active-class="animated fadeOutDown"
             >
-                <div class="solutions" ref="navbar" v-show="this.needShow==1" animate-delay="1000ms">
+                <div class="solutions" v-show="this.needShow==1" animate-delay="0s">
                     <div class="sixDisp">
                         <div @click="solutions(1)">营销传播</div>
                         <div @click="solutions(2)">招生转化</div>
@@ -85,8 +85,7 @@ export default {
     props:['index'],
     data() {
         return {
-            needShow: 0,
-            nowIndex:0
+            needShow: 0
         };
     },
     mounted(){
@@ -101,8 +100,9 @@ export default {
             // let el = event.currentTarget;
             // el.style.borderBottom = "3px solid red";
         },
-        destoryIndex(){
-            this.needShow==1?this.needShow=-1:this.needShow = this.nowIndex;
+        destoryList(){
+            let solutions = document.querySelector('.solutions');
+            solutions.style.display = 'none'
         },
         goToLogin() {
             this.$router.push({
@@ -173,7 +173,7 @@ header {
                 color: #000000;
             }
             div{
-                width:80%;
+                width: 50%;
                 height: 60px;
                 margin: 0 auto;
                 box-sizing: border-box;

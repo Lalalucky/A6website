@@ -5,7 +5,7 @@
         <div class="banner">
             <el-carousel :height="600+'px'" class="banner_item">
                 <el-carousel-item v-for="item in 4" :key="item">
-                    <router-link tag="h3" class="free_trial" to="/register">免费体验</router-link>
+                    <router-link tag="h3" class="free_trial" to="/">免费体验</router-link>
                 </el-carousel-item>
             </el-carousel>
         </div>

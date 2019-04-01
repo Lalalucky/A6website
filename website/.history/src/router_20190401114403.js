@@ -29,10 +29,8 @@ export default new Router({
     base: process.env.BASE_URL,
     routes: [
         {
-            path: '/',
-            component: Home,
-            name:'Home',
-            redirect: '/home'
+            path: '/homes',
+            redirect: Home,
         },
         {
             path: '/home',
@@ -40,9 +38,8 @@ export default new Router({
             component: Home,
             children: [
                 {
-                    path: '/home/',
-                    redirect: '/home/bussiness',
-                    component: Business
+                    path: '/home/bussiness',
+                    redirect: Business
                 },
                 {
                     path: '/home/bussiness',

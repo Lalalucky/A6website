@@ -5,7 +5,7 @@
         <div class="banner">
             <el-carousel :height="600+'px'" class="banner_item">
                 <el-carousel-item v-for="item in 4" :key="item">
-                    <router-link tag="h3" class="free_trial" to="/register">免费体验</router-link>
+                    <!-- <router-link tag="h3" class="free_trial" to="/">免费体验</router-link> -->
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -22,9 +22,33 @@
                         <router-link to="/home/controls" tag="li">管控</router-link>
                         <router-link to="/home/education" tag="li">继续教育</router-link>
                     </ul>
-                    <div class="container">
+                    <div>
                         <router-view></router-view>
                     </div>
+                    <!-- <div class="adv_one adv_point" v-show="nowIndex===0">
+                        <p>围绕在学院周期展开1</p>
+                        <p>闭环式营销综合解决方案1</p>
+                    </div>
+                    <div class="adv_two adv_point" v-show="nowIndex===1">
+                        <p>围绕在学院周期展开2</p>
+                        <p>闭环式营销综合解决方案2</p>
+                    </div>
+                    <div class="adv_three adv_point" v-show="nowIndex===2">
+                        <p>围绕在学院周期展开3</p>
+                        <p>闭环式营销综合解决方案3</p>
+                    </div>
+                    <div class="adv_four adv_point" v-show="nowIndex===3">
+                        <p>围绕在学院周期展开4</p>
+                        <p>闭环式营销综合解决方案4</p>
+                    </div>
+                    <div class="adv_five adv_point" v-show="nowIndex===4">
+                        <p>围绕在学院周期展开5</p>
+                        <p>闭环式营销综合解决方案5</p>
+                    </div>
+                    <div class="adv_three adv_point" v-show="nowIndex===5">
+                        <p>围绕在学院周期展开6</p>
+                        <p>闭环式营销综合解决方案6</p>
+                    </div> -->
                 </div>
             </div>
             <YiHelper :h1="'易教育如何帮您实现机构运营全面升级'"></YiHelper>
@@ -336,7 +360,7 @@ main > div {
                 cursor: pointer;
             }
         }
-        .container {
+        .adv_point {
             width: 90%;
             margin: 0 auto;
             height: 300px;

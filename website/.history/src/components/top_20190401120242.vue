@@ -64,7 +64,7 @@
                 enter-active-class="animated fadeIn"
                 leave-active-class="animated fadeOut"
             >
-                <div class="solutions" ref="navbar" v-show="this.needShow==1" animate-delay="1000ms">
+                <div class="solutions" ref="navbar" v-show="this.needShow==1" animate-delay="0s">
                     <div class="sixDisp">
                         <div @click="solutions(1)">营销传播</div>
                         <div @click="solutions(2)">招生转化</div>
@@ -173,7 +173,7 @@ header {
                 color: #000000;
             }
             div{
-                width:80%;
+                width: 50%;
                 height: 60px;
                 margin: 0 auto;
                 box-sizing: border-box;

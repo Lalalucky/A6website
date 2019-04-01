@@ -35,11 +35,9 @@ import './assets/animate/animate.css';
 
 // 路由钩子
 router.beforeEach((to, from, next) => {
-    let root = to.path.split("/")[1];
-    let children = from.path.split("/")[1];
-    if (root !== children) {
-        window.scrollTo(0, 0);
-     }
+    let root = to.split("/")[1];
+    console.log(root);
+  window.scrollTo(0, 0);
   var getData = getLocalStorage("auth_key", 1000 * 60 * 60 * 24 * 7);
   // console.log(getData)
   if (to.meta.login) {

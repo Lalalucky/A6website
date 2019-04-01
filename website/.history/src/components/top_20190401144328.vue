@@ -173,7 +173,6 @@ header {
                 color: #000000;
             }
             div{
-                width:80%;
                 height: 60px;
                 margin: 0 auto;
                 box-sizing: border-box;

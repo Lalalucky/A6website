@@ -30,9 +30,8 @@ export default new Router({
     routes: [
         {
             path: '/',
+            name: "Home",
             component: Home,
-            name:'Home',
-            redirect: '/home'
         },
         {
             path: '/home',
@@ -40,9 +39,8 @@ export default new Router({
             component: Home,
             children: [
                 {
-                    path: '/home/',
-                    redirect: '/home/bussiness',
-                    component: Business
+                    path: '/home/bussiness',
+                    redirect: Business
                 },
                 {
                     path: '/home/bussiness',

@@ -13,13 +13,7 @@ import Coopration from './views/cooperation/index.vue';
 import Service from './views/server/inedx.vue';
 import ContactUs from './views/contactUs/index.vue';
 
-//首页下面的组件
-import Business from "./views/home/business.vue";
-import Controls from "./views/home/controls.vue";
-import Education from "./views/home/education.vue";
-import Marketing from "./views/home/marketing.vue";
-import Sell from "./views/home/sell.vue";
-import Source from "./views/home/source.vue";
+//首页
 
 import Top from "@/components/top.vue";
 Vue.use(Router)
@@ -27,54 +21,10 @@ Vue.use(Router)
 export default new Router({
     mode: 'history',
     base: process.env.BASE_URL,
-    routes: [
-        {
+    routes: [{
             path: '/',
-            component: Home,
-            name:'Home',
-            redirect: '/home'
-        },
-        {
-            path: '/home',
             name: "Home",
             component: Home,
-            children: [
-                {
-                    path: '/home/',
-                    redirect: '/home/bussiness',
-                    component: Business
-                },
-                {
-                    path: '/home/bussiness',
-                    name: 'Bussiness',
-                    component: Business
-                },
-                {
-                    path: '/home/controls',
-                    name: 'Controls',
-                    component: Controls
-                },
-                {
-                    path: '/home/education',
-                    name: 'Education',
-                    component: Education
-                },
-                {
-                    path: '/home/marketing',
-                    name: 'Marketing',
-                    component: Marketing
-                },
-                {
-                    path: '/home/sell',
-                    name: 'sell',
-                    component: Sell
-                },
-                {
-                    path: '/home/source',
-                    name: 'source',
-                    component: Source
-                },
-            ]
         },
         {
             path: '/login',
