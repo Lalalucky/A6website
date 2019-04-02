@@ -35,7 +35,7 @@ import './assets/animate/animate.css';
 
 // 路由钩子
 router.beforeEach((to, from, next) => {
-    // 这里准备本页面内部的路由切换不要滚动到头部
+    // 这里准备本页面北部的路由切换不要滚动到头部
     let root = to.path.split("/")[1];
     let children = from.path.split("/")[1];
     if (root !== children) {
