@@ -1,0 +1,124 @@
+<template>
+    <div class="yi_job">
+        <h1 class="theme"><span></span>我们将如何开展工作</h1>
+        <div class="container">
+            <div class="buildPath">
+                <div class="tache">
+                    <img src="../assets/images/home/项目启动.png" alt="">
+                    <h3>项目启动</h3>
+                    <p>确认实施方案</p>
+                    <p>确认项目负责人</p>
+                </div>
+                <div class="tache">
+                    <img src="../assets/images/home/系统部署.png" alt="">
+                    <h3>系统部署</h3>
+                    <p>系统搭建</p>
+                    <p>确认架构体系</p>
+                    <p>应用测试</p>
+                    <p>环境部署</p>
+                </div>
+                <div class="tache">
+                    <img src="../assets/images/home/数据导入.png" alt="">
+                    <h3>数据导入</h3>
+                    <p>准备初始数据</p>
+                    <p>导入数据</p>
+                    <p>核对数据</p>
+                </div>
+                <div class="tache">
+                    <img src="../assets/images/home/系统培训.png" alt="">
+                    <h3>系统培训</h3>
+                    <p>按岗位角色</p>
+                    <p>定点培训</p>
+                </div>
+                <div class="tache">
+                    <img src="../assets/images/home/服务跟踪.png" alt="">
+                    <h3>服务跟踪</h3>
+                    <p>系统试运营</p>
+                    <p>验收数据</p>
+                </div>
+                <div class="tache">
+                    <img src="../assets/images/home/运营指导.png" alt="">
+                    <h3>运营指导</h3>
+                    <p>持续跟进回访</p>
+                    <p>长期服务支持</p>
+                </div>
+            </div>
+        </div>
+        <div class="konwMore">
+            <div>免费体验</div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "YiJob",
+    data() {
+        return {};
+    },
+    components: {}
+};
+</script>
+
+<style scoped lang="less">
+.yi_job {
+    padding: 30px 0;
+    h1 {
+        text-align: center;
+        line-height: 60px;
+        font-size: 24px;
+        margin: 30px 0;
+    }
+    .container .buildPath {
+        width: 100%;
+        margin: 45px auto;
+        display: flex;
+        flex-wrap: wrap;
+        .tache {
+            position: relative;
+            margin: 15px 0;
+            width: 16.6%;
+            text-align: center;
+            h3 {
+                font-size: 18px;
+                font-weight: bold;
+                margin: 5px 0;
+            }
+            p {
+                margin: 5px;
+            }
+        }
+        // .tache:not(:first-child):before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 15px;
+        //     left: 0;
+        //     width: 20%;
+        //     height: 2px;
+        //     background: #000000;
+        // }
+        .tache:not(:last-child):after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            right: -100px;
+            width: 40%;
+            height: 2px;
+            background: #000000;
+        }
+    }
+    .konwMore {
+        div {
+            width: 8%;
+            height: 30px;
+            box-sizing: border-box;
+            border: 1px solid #ececec;
+            border-radius: 15px;
+            margin: 20px auto;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}
+</style>
