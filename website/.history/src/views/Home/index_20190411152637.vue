@@ -1,7 +1,6 @@
 <template>
     <!-- 官网主页 -->
     <div>
-        <outLink></outLink>
         <Top :index="'0'"></Top>
         <div class="banner">
             <el-carousel :height="595+'px'" :interval='4000' class="banner_item">
@@ -176,8 +175,7 @@ export default {
         WordCloud,
         YiJob,
         YiHelper,
-        YiServer,
-        outLink
+        YiServer
     },
     created(){
     },
@@ -336,7 +334,7 @@ export default {
                 height: 56px;
                 line-height: 30px;
                 padding: 10px 0;
-                border-radius: 8px;
+                border-radius: 26px;
                 background:linear-gradient(180deg,rgba(255,221,135,1) 0%,rgba(246,185,84,1) 100%);
             }
         }

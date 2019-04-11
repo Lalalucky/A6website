@@ -82,7 +82,6 @@ export default {
                 "-webkit-animation-delay": delay,
                 "animation-duration": duration,
                 "-webkit-animation-duration": duration,
-                "opacity":0
             }
             var getCssText = function(obj) {
                 var text = [];

@@ -82,7 +82,6 @@ export default {
                 "-webkit-animation-delay": delay,
                 "animation-duration": duration,
                 "-webkit-animation-duration": duration,
-                "opacity":0
             }
             var getCssText = function(obj) {
                 var text = [];
@@ -114,7 +113,7 @@ export default {
             margin: 15px 0;
             width: 16.6%;
             text-align: center;
-            opacity: 0;
+            opacity: 1;
             transition: 400ms;
             h3 {
                 font-size: 18px;

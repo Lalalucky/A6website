@@ -14,18 +14,14 @@
                     <div class="platform">
                         <h3>南京云宝网络有限公司</h3>
                         <div class="web_plat">
-                            <div class="cooper">合作伙伴 :</div>
+                            <div class="cooper">合作伙伴</div>
                             <div class="cooper_list">
-                                <div>
-                                    <div>搜狐</div>
-                                    <div>百家号</div>
-                                    <div>企鹅号</div>
-                                </div>
-                                <div>
-                                    <div>网易号</div>
-                                    <div>知乎号</div>
-                                    <div>一点资讯</div>
-                                </div>
+                                <div>搜狐</div>
+                                <div>百家号</div>
+                                <div>企鹅号</div>
+                                <div>网易号</div>
+                                <div>知乎号</div>
+                                <div>一点资讯</div>
                             </div>
                         </div>
                     </div>
@@ -49,9 +45,9 @@
             <div class="friend_link">
                 <div>友情链接:</div>
                 <ul>
-                    <li><a href="">abcabcabcabc</a></li>
-                    <li><a href="">abcabcabcabc</a></li>
-                    <li><a href="">abcabcabcabc</a></li>
+                    <li>abcabcabcabc</li>
+                    <li>abcabcabcabc</li>
+                    <li>abcabcabcabc</li>
                 </ul>
             </div>
             <div class="property_info">
@@ -85,15 +81,14 @@ export default {
 
 .footer {
     width: 100%;
+    padding: 47px 18.75%;
+    background:rgba(74,75,76,1);
     color: #ffffff;
     .container {
         width: 100%;
         .foot_top {
             width: 100%;
-            padding: 47px 18.75%;
             display: flex;
-            background:rgba(74,75,76,1);
-            border-bottom: 2px solid #B6B6B7;
             .guide {
                 width: 20%;
                 h3 {
@@ -103,7 +98,7 @@ export default {
                 }
                 a {
                     text-decoration: none;
-                    color: #ffffff;
+                    color: #000000;
                     text-indent: 1rem;
                     margin: 5px 0;
                     display: block;
@@ -121,7 +116,6 @@ export default {
                     .web_plat {
                         width: 100%;
                         display: flex;
-                        margin-bottom: 45px;
                         .cooper{
                             width: 120px;
                             font-size: 16px;
@@ -129,18 +123,12 @@ export default {
                         }
                         .cooper_list{
                             width: 500px;
-                            line-height: 22px;
-                            font-weight: 400;
                             display: flex;
                             flex-wrap: wrap;
                             justify-content: space-between;
-                            &>div{
-                                width: 500px;
-                                text-align: left;
-                                div{
-                                    width: 120px;
-                                    display: inline-block;
-                                }
+                            div{
+                                width: 150px;
+                                text-align: center;
                             }
                         }
                     }
@@ -153,10 +141,10 @@ export default {
             .micro_code {
                 width: 30%;
                 display: flex;
-                justify-content:space-around;
+                justify-content: space-around;
                 div {
-                    width: 110px;
-                    height: 110px;
+                    width: 42%;
+                    height: 10vw;
                     background: #ececec;
                     box-shadow: 1px 1px 1px #ececec;
                 }
@@ -164,32 +152,20 @@ export default {
         }
         .friend_link {
             display: flex;
-            padding: 15px 18.75%;
-            background:rgba(74,75,76,1);
+            margin: 15px 0;
+            padding: 15px 0;
             div {
-                font-size:14px;
-                font-family:PingFangSC-Regular;
-                font-weight:400;
-                color:rgba(182,182,183,1);
-                line-height:20px;
+                text-indent: 2rem;
             }
             ul {
                 display: flex;
-                li a{
-                    margin: 0 5px;
-                    font-size:14px;
-                    font-family:PingFangSC-Regular;
-                    font-weight:400;
-                    color:rgba(182,182,183,1);
-                    line-height:20px;
-                    cursor: pointer;
+                li {
+                    padding: 0 6px;
                 }
             }
         }
         .property_info {
             width: 100%;
-            padding: 15px 18.75% 45px;
-            color:rgba(74,74,74,1);
             .container {
                 height: 60px;
                 padding-right: 350px;

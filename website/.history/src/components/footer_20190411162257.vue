@@ -188,8 +188,6 @@ export default {
         }
         .property_info {
             width: 100%;
-            padding: 15px 18.75% 45px;
-            color:rgba(74,74,74,1);
             .container {
                 height: 60px;
                 padding-right: 350px;

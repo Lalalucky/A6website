@@ -25,7 +25,7 @@ export default {
     text-align: center;
     background:url('~@/assets/images/home/register.png') no-repeat center;
     h1{
-        padding: 80px 0;
+        padding: 
         color: #ffffff;
     }
     .linkTo{

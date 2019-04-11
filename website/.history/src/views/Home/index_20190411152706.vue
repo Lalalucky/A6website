@@ -336,7 +336,7 @@ export default {
                 height: 56px;
                 line-height: 30px;
                 padding: 10px 0;
-                border-radius: 8px;
+                border-radius: 26px;
                 background:linear-gradient(180deg,rgba(255,221,135,1) 0%,rgba(246,185,84,1) 100%);
             }
         }

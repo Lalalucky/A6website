@@ -41,18 +41,12 @@
                     </router-link>
                 </div>
                 <div class="item">
-                    <!-- <router-link tag="div" to="/academe/index" class="nav">
+                    <router-link tag="div" class="nav">
                         <div
                             @mouseover="getIndex(3,$event)"
                             :class="[this.index==3?'underline':'']"
                         >易教育学苑</div>
-                    </router-link> -->
-                    <div class="nav">
-                        <div
-                            @mouseover="getIndex(3,$event)"
-                            :class="[this.index==3?'underline':'']"
-                        >易教育学苑</div>
-                    </div>
+                    </router-link>
                 </div>
                 <div class="item">
                     <router-link tag="div" to="/cooprations/index" class="nav">
@@ -104,9 +98,7 @@
                 leave-active-class="animated fadeOut"
             >
                 <div class="news_warp" ref="navbar" v-show="this.needShow==3" animate-delay="1000ms">
-                    <div class="first_level" v-for="first in 4" :key="first">
-                        <div class="second_evel" v-for="second in 4" :key="second"></div>
-                    </div>
+                    <div class="first_level"></div>
                 </div>
             </transition>
         </div>

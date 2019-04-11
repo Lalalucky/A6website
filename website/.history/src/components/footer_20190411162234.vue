@@ -164,7 +164,8 @@ export default {
         }
         .friend_link {
             display: flex;
-            padding: 15px 18.75%;
+            margin: 15px 0;
+            padding: 0 18.75%;
             background:rgba(74,75,76,1);
             div {
                 font-size:14px;
@@ -188,8 +189,6 @@ export default {
         }
         .property_info {
             width: 100%;
-            padding: 15px 18.75% 45px;
-            color:rgba(74,74,74,1);
             .container {
                 height: 60px;
                 padding-right: 350px;

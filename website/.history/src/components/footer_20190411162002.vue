@@ -49,9 +49,9 @@
             <div class="friend_link">
                 <div>友情链接:</div>
                 <ul>
-                    <li><a href="">abcabcabcabc</a></li>
-                    <li><a href="">abcabcabcabc</a></li>
-                    <li><a href="">abcabcabcabc</a></li>
+                    <li>abcabcabcabc</li>
+                    <li>abcabcabcabc</li>
+                    <li>abcabcabcabc</li>
                 </ul>
             </div>
             <div class="property_info">
@@ -85,6 +85,7 @@ export default {
 
 .footer {
     width: 100%;
+    background:rgba(74,75,76,1);
     color: #ffffff;
     .container {
         width: 100%;
@@ -92,7 +93,6 @@ export default {
             width: 100%;
             padding: 47px 18.75%;
             display: flex;
-            background:rgba(74,75,76,1);
             border-bottom: 2px solid #B6B6B7;
             .guide {
                 width: 20%;
@@ -164,8 +164,8 @@ export default {
         }
         .friend_link {
             display: flex;
-            padding: 15px 18.75%;
-            background:rgba(74,75,76,1);
+            margin: 15px 0;
+            padding: 0 18.75%;
             div {
                 font-size:14px;
                 font-family:PingFangSC-Regular;
@@ -176,20 +176,16 @@ export default {
             ul {
                 display: flex;
                 li a{
-                    margin: 0 5px;
                     font-size:14px;
                     font-family:PingFangSC-Regular;
                     font-weight:400;
                     color:rgba(182,182,183,1);
                     line-height:20px;
-                    cursor: pointer;
                 }
             }
         }
         .property_info {
             width: 100%;
-            padding: 15px 18.75% 45px;
-            color:rgba(74,74,74,1);
             .container {
                 height: 60px;
                 padding-right: 350px;

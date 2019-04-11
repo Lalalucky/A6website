@@ -3,7 +3,7 @@
         <h1 class="theme"><span></span>我们将如何开展工作</h1>
         <div class="container">
             <div class="buildPath">
-                <transition-group enter-active-class="fadeInLeft" leave-active-class="" v-on:before-enter="beforeEnter" v-on:enter="enter">
+                <transition-group  enter-active-class="fadeInLeft" leave-active-class="fadeOutLeft" v-on:before-enter="beforeEnter" v-on:enter="enter">
                     <div class="tache animated" :key="1" v-show="showTime" animate-delay="0s" animate-duration="400ms">
                         <img src="../assets/images/home/项目启动.png" alt="">
                         <h3>项目启动</h3>
@@ -82,7 +82,7 @@ export default {
                 "-webkit-animation-delay": delay,
                 "animation-duration": duration,
                 "-webkit-animation-duration": duration,
-                "opacity":0
+                "visibility": "visible",
             }
             var getCssText = function(obj) {
                 var text = [];
@@ -94,7 +94,7 @@ export default {
             el.style.cssText = getCssText(cssObj);
         },
         enter:function (el,done) {
-            el.style.opacity=1;
+            // el.style.opacity=1;
         }
     }
 };
@@ -109,6 +109,9 @@ export default {
         margin: 45px auto;
         display: flex;
         flex-wrap: wrap;
+        .fadeInLeft{
+            
+        }
         .tache {
             position: relative;
             margin: 15px 0;

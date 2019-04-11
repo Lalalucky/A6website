@@ -82,7 +82,7 @@ export default {
                 "-webkit-animation-delay": delay,
                 "animation-duration": duration,
                 "-webkit-animation-duration": duration,
-                "opacity":0
+                "opacity": 0
             }
             var getCssText = function(obj) {
                 var text = [];
@@ -94,11 +94,15 @@ export default {
             el.style.cssText = getCssText(cssObj);
         },
         enter:function (el,done) {
-            el.style.opacity=1;
+            
         }
     }
 };
 </script>
+
+<style>
+    
+</style>
 
 <style scoped lang="less">
 .yi_job {

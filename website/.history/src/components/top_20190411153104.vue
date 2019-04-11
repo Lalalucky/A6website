@@ -41,18 +41,12 @@
                     </router-link>
                 </div>
                 <div class="item">
-                    <!-- <router-link tag="div" to="/academe/index" class="nav">
+                    <router-link tag="div" to="/academe/index" class="nav">
                         <div
                             @mouseover="getIndex(3,$event)"
                             :class="[this.index==3?'underline':'']"
                         >易教育学苑</div>
-                    </router-link> -->
-                    <div class="nav">
-                        <div
-                            @mouseover="getIndex(3,$event)"
-                            :class="[this.index==3?'underline':'']"
-                        >易教育学苑</div>
-                    </div>
+                    </router-link>
                 </div>
                 <div class="item">
                     <router-link tag="div" to="/cooprations/index" class="nav">
@@ -87,7 +81,12 @@
                 enter-active-class="animated fadeIn"
                 leave-active-class="animated fadeOut"
             >
-                <div class="solutions" ref="navbar" v-show="this.needShow==1" animate-delay="1000ms">
+                <div
+                    class="solutions"
+                    ref="navbar"
+                    v-show="this.needShow==1"
+                    animate-delay="1000ms"
+                >
                     <div class="sixDisp">
                         <div @click="solutions(1)">营销传播</div>
                         <div @click="solutions(2)">招生转化</div>
@@ -103,9 +102,19 @@
                 enter-active-class="animated fadeIn"
                 leave-active-class="animated fadeOut"
             >
-                <div class="news_warp" ref="navbar" v-show="this.needShow==3" animate-delay="1000ms">
-                    <div class="first_level" v-for="first in 4" :key="first">
-                        <div class="second_evel" v-for="second in 4" :key="second"></div>
+                <div
+                    class="solutions"
+                    ref="navbar"
+                    v-show="this.needShow==1"
+                    animate-delay="1000ms"
+                >
+                    <div class="sixDisp">
+                        <div @click="solutions(1)">营销传播</div>
+                        <div @click="solutions(2)">招生转化</div>
+                        <div @click="solutions(3)">业务升级</div>
+                        <div @click="solutions(4)">教务教研</div>
+                        <div @click="solutions(5)">信息职教</div>
+                        <div @click="solutions(6)">一站到底</div>
                     </div>
                 </div>
             </transition>
@@ -120,6 +129,7 @@ export default {
     data() {
         return {
             needShow: 0,
+            xueyuan:0,
             nowIndex: 0
         };
     },
@@ -185,7 +195,7 @@ export default {
 @import "~@/assets/global.less";
 
 .header {
-    width: 100%;
+    width:100%;
     line-height: 60px;
     text-align: center;
     z-index: 100;

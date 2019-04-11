@@ -104,9 +104,7 @@
                 leave-active-class="animated fadeOut"
             >
                 <div class="news_warp" ref="navbar" v-show="this.needShow==3" animate-delay="1000ms">
-                    <div class="first_level" v-for="first in 4" :key="first">
-                        <div class="second_evel" v-for="second in 4" :key="second"></div>
-                    </div>
+                    <div class="first_level"></div>
                 </div>
             </transition>
         </div>
