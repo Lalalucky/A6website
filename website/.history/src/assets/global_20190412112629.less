@@ -1,0 +1,87 @@
+// 这里定义了其他组件里面需要使用到的变量
+// 基础色
+@base_color: #2276c3;
+// 基本宽度
+#baseWidth{
+    width: 90%;
+    margin:15px auto;
+    border:1px solid #ececec;
+    border-radius: 5px;
+}
+
+//清除浮动
+.clearfix:after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1
+}
+//超出部分隐藏
+.ellipsis{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+// 标题采用兰亭字体
+.theme{
+    font-family: PFregular;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 34px;
+    color:rgba(74, 144, 226, 1);
+    padding: 120px 0 80px;
+    text-align: center;
+}
+.theme>span{
+    display: inline-block;
+    width: 5px;
+    height: 30px;
+    padding: 5px 0;
+    margin: 0 10px;
+    background: #4A90E2;
+}
+
+//首页++++易教育，能问你带来什么？
+.shoucut {
+    width: 600px;
+    .col_t {
+        text-align: left;
+        font-size: 24px;
+        font-weight: 500;
+        color: rgba(74, 144, 226, 1);
+        line-height: 33px;
+    }
+
+    .adv_word {
+        text-align: left;
+        padding: 56px 0;
+        p {
+            font-size: 20px;
+            font-family: PingFangSC-Medium;
+            font-weight: 500;
+            color: rgba(102, 102, 102, 1);
+            line-height: 28px;
+        }
+    }
+}
+
+.light_point {
+    text-align: left;
+    li {
+        margin-bottom: 8px;
+        height: 28px;
+        font-size: 20px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        color: rgba(64, 64, 64, 1);
+        line-height: 28px;
+        img{
+            display: block;
+            line-height: 28px;
+        }
+    }
+}

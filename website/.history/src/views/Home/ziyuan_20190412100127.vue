@@ -1,0 +1,28 @@
+<template>
+<!-- 资源 -->
+   <div class="source">
+       <div class="shoucut">
+           <div class="col_t"></div>
+           <p class="adv_word"></p>
+       </div>
+       <ul class="light_point">
+           <li>培训资源共享，自主选购，及时变现</li>
+           <li>培训资源，结构化管理，版权保护，实现沉淀</li>
+           <li>智能排课，一键调整，提升效率</li>
+           <li></li>
+       </ul>
+   </div>
+</template>
+
+<script>
+export default {
+   name: 'source',
+   data() {
+       return {}
+   },
+  components: {}
+}
+</script>
+
+<style scoped lang="less">
+</style>
