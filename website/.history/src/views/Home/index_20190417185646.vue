@@ -222,10 +222,11 @@ export default {
         //绑定监听
         window.addEventListener("scroll", this.handleScroll);
         //banner图片
-        this.postRequest('v1/application/get_account').then(res=>{
+        this.postRequest('v1/application/get_application',{id:1}).then(res=>{
             // console.log(res)
+            // this.pro_info_Arr = res.data.data;
         })
-        // this.postRequest('v1/application/get_application').then(res=>{
+        // this.postRequest('v1/first-banner').then(res=>{
         //     console.log(res)
         // })
         // this.axios.get('http://www.test.yunbaonet.cn/admin/v1/first-banner').then(res=>{

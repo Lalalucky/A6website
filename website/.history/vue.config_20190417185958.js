@@ -32,7 +32,6 @@
 //     }
 // }
 
-//商城
 // vue.config.js
 module.exports = {
     // baseUrl: process.env.NODE_ENV === 'production'
@@ -41,7 +40,7 @@ module.exports = {
     devServer: {
         proxy: {
             '/api': {
-                target: 'http://ybtest1.uicp.top/api', //对应自己的接口
+                target: 'http://www.test.yunbaonet.cn/api', //对应自己的接口
                 changeOrigin: true,
                 ws: true,
                 pathRewrite: {

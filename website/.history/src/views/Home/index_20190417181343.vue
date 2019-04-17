@@ -222,13 +222,10 @@ export default {
         //绑定监听
         window.addEventListener("scroll", this.handleScroll);
         //banner图片
-        this.postRequest('v1/application/get_account').then(res=>{
-            // console.log(res)
+        this.postRequest('admin/v1/first-banner').then(res=>{
+            console.log(res)
         })
-        // this.postRequest('v1/application/get_application').then(res=>{
-        //     console.log(res)
-        // })
-        // this.axios.get('http://www.test.yunbaonet.cn/admin/v1/first-banner').then(res=>{
+        // this.axios.get('http://test.yiedu.cc/admin/v1/first-banner').then(res=>{
         //     console.log(res)
         // })
     },
