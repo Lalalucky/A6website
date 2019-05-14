@@ -1,6 +1,6 @@
 <template>
     <div class="outsideLink">
-        <div class="link_phone">在线咨询</div>
+        <div class="link_phone" onclick="_MEIQIA('showPanel')">在线咨询</div>
         <div class="link" @mouseover="showIcon('phone')" @mouseleave="hideIcon('phone')">
             <div class="with_icon">
                 <img src="../assets/images/outLink/phone.png" alt>

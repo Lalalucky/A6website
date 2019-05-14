@@ -1,7 +1,14 @@
 <template>
     <div class="solutions">
+        <outLink></outLink>
         <Top :index="'1'"></Top>
-        <ImgDisplay :msg="'#bb2210'"></ImgDisplay>
+        <div class="banner">
+            <el-carousel :height="595+'px'" :interval="4000" class="banner_item">
+                <el-carousel-item v-for="item in banner" :key="item">
+                    <img v-lazy="item" alt>
+                </el-carousel-item>
+            </el-carousel>
+        </div>
         <WordCloud></WordCloud>
         <div class="brand_slogen"></div>
         <div class="light_point">
@@ -9,12 +16,24 @@
                 <h1>display with picture</h1>
                 <router-link :to="{path:'/solutions/detial',query:{id:index}}" tag="div" class="get_more">了解更多</router-link>
             </div>-->
-            <Marketing></Marketing>
-            <Sell></Sell>
-            <Business></Business>
-            <Ziyuan></Ziyuan>
-            <Controls></Controls>
-            <Education></Education>
+            <div class="around">
+                <Marketing></Marketing>
+            </div>
+            <div class="around">
+                <Sell></Sell>
+            </div>
+            <div class="around">
+                <Business></Business>
+            </div>
+            <div class="around">
+                <Ziyuan></Ziyuan>
+            </div>
+            <div class="around">
+                <Controls></Controls>
+            </div>
+            <div class="around">
+                <Education></Education>
+            </div>
         </div>
         <Register></Register>
         <Footer></Footer>
@@ -23,6 +42,7 @@
 
 <script>
 // 同首页
+import outLink from "@/components/outsideLink.vue";
 import Marketing from "../home/marketing.vue";
 import Sell from "../home/sell.vue";
 import Business from "../home/business.vue";
@@ -38,7 +58,16 @@ import Footer from "@/components/footer.vue";
 export default {
     name: "List",
     data() {
-        return {};
+        return {
+            banner: [
+                require("../../assets/images/解决方案/solution1.png"),
+                require("../../assets/images/解决方案/solution2.png"),
+                require("../../assets/images/解决方案/solution3.png"),
+                require("../../assets/images/解决方案/solution4.png"),
+                require("../../assets/images/解决方案/solution5.png"),
+                require("../../assets/images/解决方案/solution6.png")
+            ]
+        };
     },
     components: {
         Top,
@@ -51,7 +80,8 @@ export default {
         Business,
         Ziyuan,
         Controls,
-        Education
+        Education,
+        outLink
     }
 };
 </script>
@@ -60,18 +90,36 @@ export default {
 .solutions {
     width: 100%;
     overflow: hidden;
+    .banner {
+        width: 100%;
+        height: 595px;
+        overflow: hidden;
+        text-align: center;
+        .banner_item {
+            img {
+                display: block;
+                width: 1920px;
+                height: 595px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -960px;
+                margin-top: -297px;
+            }
+        }
+    }
     .brand_slogen {
         width: 100%;
         height: 250px;
         margin: 30px 0;
-        background: url("~@/assets/images/slogen.png") no-repeat center;
+        background: url("~@/assets/images/slogen.png") center;
     }
     .light_point {
-        & > div {
+        .around > div {
             position: relative;
             width: 1200px;
             height: 360px;
-            margin: 15px auto;
+            margin: 0 auto;
             margin-top: -2px;
             display: flex;
             padding: 38px 0 38px 100px;
@@ -132,16 +180,16 @@ export default {
                     rgba(118, 157, 234, 1) 100%
                 );
                 border-radius: 5px;
-
                 .btn {
                     height: 36px;
                     line-height: 36px;
                     color: #ffffff;
                     cursor: pointer;
+                    text-align: center;
                 }
             }
         }
-        &>div:nth-child(even){
+        & > div:nth-child(even) {
             background: #f4f4f4;
         }
     }

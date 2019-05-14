@@ -3,41 +3,33 @@
     <div class="article">
         <Top></Top>
         <div class="detials">
-            <h1 class="headline">{{this.data.headline}}</h1>
+            <h1 class="headline">{{this.main.post_title}}</h1>
             <div class="content">
                 <div class="related_info">
                     <div class="essay_tag">
-                        文章标签：
-                        <span v-for="item in this.data.tag" :key="item">{{item}}/</span>
+                        <!-- 文章标签： -->
+                        <!-- <span v-for="item in this.main.tag" :key="item">{{item}}/</span> -->
                     </div>
                     <div class="establisher">
                         发布人：
-                        <span>{{this.data.establisher}}</span>
+                        <span>{{this.main.author_name}}</span>
                     </div>
                     <div class="essay_time">
                         发布时间：
-                        <span>{{this.data.time}}</span>
+                        <span>{{this.main.created_at}}</span>
                     </div>
                 </div>
                 <div class="essay_itself">
                     <!-- 转发 -->
                     <div class="transpond">
-                        <div class="tools">
-                            
-                        </div>
+                        <div class="tools"></div>
                     </div>
                     <!-- 文章主体 -->
-                    <div class="essay_main">{{this.data.main.content}}</div>
+                    <div class="essay_main" ref="essay_main"></div>
                 </div>
                 <div class="betweens_essay">
-                    <div class="prev_essay" v-show="this.data.prev.id" @click="prvArticle()">
-                        上一篇文章：
-                        <span>{{this.data.prev.headline}}</span>
-                    </div>
-                    <div class="next_essay" v-show="this.data.next.id" @click="nextArticle()">
-                        下一篇文章：
-                        <span>{{this.data.prev.headline}}</span>
-                    </div>
+                    <div class="prev_essay" v-show="this.main.last" @click="search_article(0)">上一篇</div>
+                    <div class="next_essay" v-show="this.main.next" @click="search_article(1)">下一篇</div>
                 </div>
             </div>
         </div>
@@ -46,8 +38,8 @@
             <p class="recommed_t">精选文章</p>
             <div class="recommed_article">
                 <div class="re_item" v-for="item in 5" :key="item">
-                    <img src="" alt="">
-                    <p class="theme">标题</p>
+                    <img src alt>
+                    <!-- <p class="theme">标题</p> -->
                 </div>
             </div>
         </div>
@@ -63,44 +55,61 @@ export default {
     data() {
         return {
             // 这里记录当前这篇文章所有的相关内容
-            data: {
-                id: "Y23333",
-                headline: "春暖大地 花香人间",
-                tag: ["文学", "描物", "绘画"],
-                establisher: "小叮当",
-                time: "2019-03-22",
-                main: {
-                    content:
-                        "忧深思远出手得卢食不累味撑岸就船修真炼性晕晕沉沉面授机宜赋值语句年灾月晦尔汝之交织田信长常规武器挥霍无度天吴紫凤找台阶儿治外法权病民蛊国行乎富贵下官不职不胜其苦害起肘腋亲仁善邻前一阵子刘宠一钱桑户桊枢无患之患九儒十丐珠玉在傍三江平原三衅三沐粜风卖雨心亿则乐我的一家枉法取私捣虚撇抗晏开之警他他藉藉看家本事九九归一亲子鉴定别具手眼空谷白驹求生害仁磨砻隽切斑衣戏彩甘限文书五内俱崩银团贷款三代执金顺水人情五更三点博洽多闻后拥前遮化学元素市场体系鼻头出火毛发不爽削株掘根甘心情愿总有机碳文无加点虾蟆给事安福国会鸟惊兽骇余韵绕梁指皁为白皓齿红唇马水车龙魂不着体不测之诛衅面吞炭香格里拉身败名裂喧宾夺主惹祸招灾抉瑕擿衅倚山傍水妥妥贴贴淘沙取金茂实英声管窥之见的羞剔痒囹圄充积紧急避险穿针走线雪北香南形之笔墨童颜鹤发金鸡放赦越畔之思殁而不朽勿剪之欢以观后效目秀眉清煎汤洗臀闭门墐户解放思想十殿阎王戚戚嗟嗟兴无灭资"
-                },
-                prev: {
-                    headline: "采蘑菇的小姑娘 背着一个大箩筐",
-                    id: "Y1452632"
-                },
-                next: ""
-            }
+            main: {},
+            last: "",
+            next: "",
+            essay_main: "",
+            // 定时器,数字2代表两分钟
+            minute: 1
         };
     },
-    created(){
+    created() {
         window.scrollTo(0, 0);
+        this.getData();
+        _MEIQIA("showPanel");
     },
-    mounted(){
+    mounted() {
         // this.WXconfig.wxShowMenu();
     },
-    methods:{
-        prvArticle(){
-            let article_id = this.data.prev.id;
-            this.$router.push({
-                path: "/academe/article",
-                query: { id: article_id }
-            });
+    watch: {
+        $route() {
+            if (this.$route.path === "/academe/article") {
+                this.getData();
+            }
+        }
+    },
+    methods: {
+        // 一个定时的弹出对话框
+        openCon() {
+            let time = this.minute * 60 * 1000;
+            setTimeout(() => {
+                _MEIQIA("showPanel");
+            }, time);
         },
-        nextArticle(){
-            let article_id = this.data.next.id;
-            this.$router.push({
-                path: "/academe/article",
-                query: { id: article_id }
-            });
+        getData() {
+            let id = this.$route.query.article_id;
+            this.postRequest("v1/application/get-paper-detail", { id }).then(
+                res => {
+                    this.main = res.data.data;
+                    this.last = this.main.last;
+                    this.next = this.main.next;
+                    this.essay_main = this.main.content;
+                    this.$refs.essay_main.innerHTML = this.main.content;
+                }
+            );
+        },
+        search_article(type) {
+            if (type === 0) {
+                this.$router.replace({
+                    path: "/academe/article",
+                    query: { article_id: this.last }
+                });
+            } else {
+                this.$router.replace({
+                    path: "/academe/article",
+                    query: { article_id: this.next }
+                });
+            }
         }
     },
     components: {
@@ -114,7 +123,7 @@ export default {
 .article {
     width: 100%;
     .detials {
-        width: 80%;
+        width: 1200px;
         margin: 0 auto;
         padding: 45px 0;
         .headline {
@@ -137,46 +146,73 @@ export default {
             .essay_itself {
                 display: flex;
                 padding: 30px 0;
-                height: 600px;
+                min-height: 800px;
                 .transpond {
-                    width: 20%;
-                    padding: 0 6%;
+                    width: 200px;
+                    padding: 0 50px;
                     .tools {
                         border: 1px solid #ececec;
-                        height: 540px;
+                        height: 800px;
+                        border-radius: 10px;
+                        background: #b6b6b7;
+                        visibility: hidden;
                     }
                 }
                 .essay_main {
-                    width: 80%;
-                    padding: 2% 2%;
-                    border: 1px solid #ececec;
+                    width: 900px;
+                    min-height: 800px;
+                    // height: 800px;
+                    padding: 30px;
+                    // overflow: auto;
+                }
+                .essay_main::-webkit-scrollbar {
+                    /*滚动条整体样式*/
+                    width: 10px; /*高宽分别对应横竖滚动条的尺寸*/
+                    height: 1px;
+                }
+                .essay_main::-webkit-scrollbar-thumb {
+                    /*滚动条里面小方块*/
+                    border-radius: 10px;
+                    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+                    background: #535353;
+                }
+                .essay_main::-webkit-scrollbar-track {
+                    /*滚动条里面轨道*/
+                    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+                    border-radius: 10px;
+                    background: #ededed;
                 }
             }
             .betweens_essay {
                 padding-left: 6%;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                div {
+                    padding: 15px 25px;
+                    cursor: pointer;
+                }
             }
         }
     }
-    .recommmed{
+    .recommmed {
         width: 80%;
         margin: 0 auto;
-        // .recommed_t{
-            
-        // }
-        .recommed_article{
+        visibility: hidden;
+        .recommed_article {
             display: flex;
-            .re_item{
+            .re_item {
                 width: 20%;
                 padding: 15px;
                 height: 13vw;
-                img{
+                img {
                     display: block;
                     width: 150px;
                     height: 150px;
                     margin: 0 auto;
                     border: 1px solid #cccccc;
                 }
-                p{
+                p {
                     text-align: center;
                 }
             }

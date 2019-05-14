@@ -22,16 +22,10 @@ import Sell from "./views/home/sell.vue";
 import Ziyuan from "./views/home/ziyuan.vue";
 
 //易学苑下面的组件
-import Company from "./views/academe/company.vue";
-import Industry from "./views/academe/industry.vue";
-import Market from "./views/academe/market.vue";
-import Organization from "./views/academe/organization.vue";
-import Products from "./views/academe/products.vue";
-import Experience from "./views/academe/experience.vue";
 Vue.use(Router)
 
 export default new Router({
-    mode: 'history',
+    // mode: 'history',
     base: process.env.BASE_URL,
     routes: [
         {
@@ -111,37 +105,6 @@ export default new Router({
             path: '/academe/index',
             name: 'Academe',
             component: Academe,
-            children: [
-                {
-                    path: '/academe/',
-                    redirect: '/academe/company',
-                    component: Company
-                },
-                {
-                    path: '/academe/company',
-                    component:Company
-                },
-                {
-                    path: '/academe/industry',
-                    component: Industry
-                },
-                {
-                    path: '/academe/market',
-                    component: Market
-                },
-                {
-                    path: '/academe/organization',
-                    component: Organization
-                },
-                {
-                    path: '/academe/products',
-                    component: Products
-                },
-                {
-                    path: '/academe/experience',
-                    component: Experience
-                },
-            ]
         },
         {
             path: '/academe/article',

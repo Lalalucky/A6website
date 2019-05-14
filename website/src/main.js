@@ -65,12 +65,16 @@ import axios from 'axios'
 Vue.prototype.axios = axios;
 import {
     postRequest,
+    myRequest,
+    elseRequest,
     getRequest,
     uploadFileRequest,
     putRequest,
     deleteRequest
 } from './request.js';
 Vue.prototype.postRequest = postRequest;
+Vue.prototype.myRequest = myRequest;
+Vue.prototype.elseRequest = elseRequest;
 Vue.prototype.getRequest = getRequest;
 Vue.prototype.uploadFileRequest = uploadFileRequest;
 Vue.prototype.putRequest = putRequest;
@@ -89,6 +93,13 @@ Vue.config.productionTip = false;
 // 微信分享
 // import WXconfig from './assets/js/wx.jsapi.js';
 // Vue.prototype.WXconfig = WXconfig;
+
+import $ from 'jquery';
+Vue.prototype.$ = $;
+
+// import vueJsonp from "vue-jsonp";
+// Vue.use(vueJsonp);
+// Vue.prototype.Jsonp = 
 
 new Vue({
     router,

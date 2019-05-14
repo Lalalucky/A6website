@@ -78,10 +78,15 @@
                         >联系我们</div>
                     </router-link>
                 </div>
+                <div class="item">
+                    <a class="nav" href="http://www.yunbaonet.cn/" target="_blank">
+                        <div>关于云宝</div>
+                    </a>
+                </div>
             </div>
-            <div class="loginAbout">
+            <!-- <div class="loginAbout">
                 <router-link tag="div" class="btn" to="/register">注册</router-link>
-            </div>
+            </div>-->
             <transition
                 name="fade"
                 enter-active-class="animated fadeIn"
@@ -94,37 +99,40 @@
                     animate-delay="1000ms"
                 >
                     <div class="sixDisp">
-                        <div @click="solutions(1)">营销</div>
-                        <div @click="solutions(2)">销售</div>
-                        <div @click="solutions(3)">业务</div>
-                        <div @click="solutions(4)">资源</div>
-                        <div @click="solutions(5)">管控</div>
-                        <div @click="solutions(6)">继续教育</div>
+                        <router-link tag="div" to="/solutions/detial?id=1" class="nav">
+                            <div>营销传播</div>
+                        </router-link>
+                        <router-link tag="div" to="/solutions/detial?id=2" class="nav">
+                            <div>招生转化</div>
+                        </router-link>
+                        <router-link tag="div" to="/solutions/detial?id=3" class="nav">
+                            <div>业务升级</div>
+                        </router-link>
+                        <router-link tag="div" to="/solutions/detial?id=4" class="nav">
+                            <div>教务教研</div>
+                        </router-link>
+                        <router-link tag="div" to="/solutions/detial?id=5" class="nav">
+                            <div>数据管控</div>
+                        </router-link>
+                        <router-link tag="div" to="/solutions/detial?id=6" class="nav">
+                            <div>继续教育</div>
+                        </router-link>
                     </div>
                 </div>
             </transition>
             <!--------------- 易教育学苑的层级路由 ------------------------->
-            <div class="news_warp" v-show="this.needShow==3">
+            <div class="news_wrap" v-show="this.needShow==3">
                 <div class="yi_router">
-                    <div class="first_level">
-                        <h3>办学干货</h3>
-                        <div class="second_evel">营销策划</div>
-                        <div class="second_evel">招生转化</div>
-                        <div class="second_evel">机构管理</div>
-                        <div class="second_evel">其他干货</div>
-                    </div>
-                    <div class="first_level">
-                        <h3>政策热点</h3>
-                        <div class="second_evel">证书相关</div>
-                        <div class="second_evel">政策文件</div>
-                        <div class="second_evel">行业新闻</div>
-                        <div class="second_evel">报考百科</div>
-                    </div>
-                    <div class="first_level">
-                        <h3>福利下载</h3>
-                        <div class="second_evel">办学礼包</div>
-                        <div class="second_evel">知识课程</div>
-                        <div class="second_evel">行业报告</div>
+                    <div class="first_level" v-for="(first,index) in this.news_wrap" :key="index">
+                        <h3>{{first.name}}</h3>
+                        <div
+                            class="second_level"
+                            v-for="(second,i) in first.children"
+                            :key="i"
+                            :data-id="second.id"
+                            @click="goToArticle(second.id)"
+                            :class="calculate(second.id)"
+                        >{{second.name}}</div>
                     </div>
                 </div>
             </div>
@@ -139,8 +147,29 @@ export default {
     data() {
         return {
             needShow: 0,
-            nowIndex: 0
+            nowIndex: 0,
+            news_wrap: []
         };
+    },
+    created() {
+        //获取一级栏目和二级栏目
+        this.postRequest("v1/application/get-two-column").then(res => {
+            // console.log(res.data.data)
+            this.news_wrap = res.data.data;
+            // console.log(this.news_wrap)
+        });
+    },
+    watch: {
+        $route() {
+            if (
+                this.$route.path === "/academe/article" ||
+                this.$route.path === "/academe/index"
+            ) {
+                let wenzhang = document.querySelectorAll(".navs .item")[3];
+                // console.log(wenzhang)
+                wenzhang.classList.add("underline");
+            }
+        }
     },
     mounted() {
         //固定头部
@@ -157,6 +186,13 @@ export default {
             this.needShow == 1
                 ? (this.needShow = -1)
                 : (this.needShow = this.nowIndex);
+        },
+        // 用以拼凑类名
+        calculate(index) {
+            let obj = { underline: true };
+            if (this.$route.query.column_id == index) {
+                return obj;
+            }
         },
         goToLogin() {
             this.$router.push({
@@ -180,21 +216,21 @@ export default {
             if (scrollTop > headerHeight) {
                 header.style.position = "fixed";
                 header.style.top = 0;
+                header.style.boxShadow =
+                    "4px 4px 30px 0px rgba(174,173,173,0.5)";
             } else {
                 header.style.position = "static";
-                header.style.boxShadow = "none";
+                // header.style.boxShadow = "none";
             }
         },
-        solutions(index) {
-            // window.location.href=''
-            window.location.href = "../solutions/detial?id="+index;
-            // this.$router.back();
-            // this.$router.push({
-            //     path: "solutions/detial",
-            //     query: {
-            //         id: index
-            //     }
-            // });
+        goToArticle(id) {
+            //跳转文章列表
+            this.$router.replace({
+                path: "/academe/index",
+                query: {
+                    column_id: id
+                }
+            });
         }
     }
 };
@@ -209,6 +245,7 @@ export default {
     text-align: center;
     z-index: 100;
     background: #ffffff;
+    color: #2b2b2b;
     .headerTop {
         width: 1200px;
         display: flex;
@@ -224,27 +261,29 @@ export default {
             }
         }
         .navs {
-            width: 720px;
+            width: 900px;
             display: flex;
+            flex-wrap: no-wrap;
             .nav {
-                width: 100px;
+                display: inline-block;
+                width: 110px;
                 height: 60px;
                 cursor: pointer;
                 box-sizing: border-box;
-                &:hover {
-                    color: #000000;
-                }
                 div {
-                    width: 90%;
                     height: 60px;
                     margin: 0 auto;
                     box-sizing: border-box;
                     font-family: PFregular;
+                    color: #2b2b2b;
+                    cursor: pointer;
                     &.underline {
                         border-bottom: 3px solid #4a90e2;
+                        color: #4a90e2;
                     }
                     &:hover {
                         border-bottom: 3px solid #4a90e2;
+                        color: #4a90e2;
                     }
                 }
             }
@@ -279,7 +318,7 @@ export default {
             top: 60px;
             width: 100%;
             background: #ffffff;
-            box-shadow:0px 0px 5px 0px rgba(182,182,183,1);
+            box-shadow: 0px 0px 5px 0px rgba(182, 182, 183, 1);
             z-index: 100;
             .sixDisp {
                 width: 1200px;
@@ -287,15 +326,17 @@ export default {
                 display: flex;
                 padding: 15px 0;
                 justify-content: center;
-                &>div {
+                color: #2b2b2b;
+                & > div {
                     height: 40px;
-                    padding: 0 5px;
+                    padding: 0 15px;
                     line-height: 40px;
                     position: relative;
                     font-size: 18px;
+                    cursor: pointer;
                 }
-                &>div:not(:last-child):after{
-                    content: '';
+                & > div:not(:last-child):after {
+                    content: "";
                     position: absolute;
                     width: 1px;
                     height: 20px;
@@ -305,34 +346,44 @@ export default {
                 }
             }
         }
-        .news_warp {
+        .news_wrap {
             position: absolute;
             left: 0;
             top: 60px;
             width: 100%;
             background: #ffffff;
-            box-shadow:0px 0px 5px 0px rgba(182,182,183,1);
+            box-shadow: 0px 0px 5px 0px rgba(182, 182, 183, 1);
             z-index: 100;
-            .yi_router{
+            .yi_router {
                 padding: 30px 0;
                 width: 1200px;
                 margin: 0 auto;
                 display: flex;
-                justify-content: center;
-                .first_level{
+                justify-content: space-around;
+                .first_level {
                     width: 15%;
                     text-align: center;
-                    h3{
-                        font-size:18px;
-                        font-weight:400;
-                        color:rgba(43,43,43,1);
-                        line-height:25px;
+                    h3 {
+                        font-size: 22px;
+                        font-weight: 400;
+                        color: rgba(43, 43, 43, 1);
+                        line-height: 30px;
+                        padding-bottom: 15px;
+                        margin-bottom: 15px;
+                        border-bottom: 2px solid #b6b6b7;
                     }
-                    div{
-                        font-size:14px;
-                        font-weight:400;
-                        color:rgba(146,146,146,1);
-                        line-height:20px;
+                    .second_level {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: rgba(146, 146, 146, 1);
+                        line-height: 22px;
+                        cursor: pointer;
+                        &:hover {
+                            color: #4a90e2;
+                        }
+                        &.underline {
+                            color: #4a90e2;
+                        }
                     }
                 }
             }

@@ -1,8 +1,6 @@
 <template>
     <div class="yiHelp">
-        <h1 class="h1 theme" ref="h_html">
-            <span class="adorn"></span>易教育如何帮您实现机构运营全面升级
-        </h1>
+        <h1 class="h1 theme" ref="h_html">易教育如何帮您实现机构运营全面升级</h1>
         <div class="container">
             <div class="tips">
                 <div class="piece">
@@ -102,9 +100,34 @@
                 </div>
             </div>
             <div class="tips">
-                <div class="showMore">
-                    <img src="../assets/images/home/showMore.png" alt>
-                </div>
+                <router-link tag="div" to="/solutions/index" class="showMore">
+                    <el-carousel
+                        :interval="2000"
+                        type="card"
+                        height="50px"
+                        class="mock_round"
+                        indicator-position="none"
+                        arrow="never"
+                        :autoplay="true"
+                        useHandCursor="true"
+                    >
+                        <el-carousel-item v-for="item in 3" :key="item">
+                            <div
+                                class="round"
+                                useHandCursor="true"
+                                buttonMode="true"
+                                mouseChildren="false"
+                            >
+                                <div
+                                    class="round_item"
+                                    useHandCursor="true"
+                                    buttonMode="true"
+                                    mouseChildren="false"
+                                ></div>
+                            </div>
+                        </el-carousel-item>
+                    </el-carousel>
+                </router-link>
             </div>
         </div>
     </div>
@@ -120,26 +143,34 @@ export default {
     components: {},
     mounted() {
         this.$refs.h_html.nodeValue = this.h1;
+    },
+    methods: {
+        goDetial() {
+            // this.$router.push({
+            //     path:'solution/index'
+            // })
+            window.location.href = "../solutions/index";
+        }
     }
 };
 </script>
 
 <style scoped lang="less">
 .yiHelp {
-    width: 62.5%;
+    width: 1200px;
     margin: 30px auto;
     .container {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         .tips {
-            margin: 15px 0;
+            margin: 15px 0px 45px;
             width: 33.3%;
             text-align: center;
             font-family: PFregular;
             .piece {
                 width: 200px;
-                padding: 45px 0;
+                padding: 35px 0 45px;
                 background: #ffffff;
                 margin: 0 auto;
                 border-top: 3px solid #4a90e2;
@@ -154,26 +185,57 @@ export default {
                         vertical-align: middle;
                     }
                     span {
-                        font-size: 18px;
+                        font-size: 24px;
                         font-weight: 400;
                         display: inline-block;
-                        line-height: 66px;
+                        line-height: 70px;
                         margin-left: 10px;
-                        color:rgba(43,43,43,1);
+                        color: rgba(43, 43, 43, 1);
                     }
                 }
                 &:hover {
                     box-shadow: 4px 4px 30px 0px rgba(174, 173, 173, 0.5);
+                    transform: scale(1.05);
+                    transition: 400ms;
+                    transition-delay: 200ms;
                 }
                 & > p {
                     font-size: 16px;
                     font-weight: 400;
                     color: rgba(102, 102, 102, 1);
-                    line-height: 22px;
+                    line-height: 26px;
                 }
             }
             .showMore {
-                padding: 110px 0;
+                padding: 108px 0;
+                cursor: pointer;
+                .mock_round {
+                    width: 150px;
+                    height: 50px;
+                    margin: 0 auto;
+                    text-align: center;
+                    .round {
+                        width: 100%;
+                        height: 100%;
+                        cursor: pointer;
+                        .round_item {
+                            border-radius: 50%;
+                            width: 25px;
+                            height: 25px;
+                            margin: 12px auto;
+                            background: rgba(154, 194, 249, 1);
+                            cursor: pointer;
+                        }
+                        &:nth-child(2) {
+                            .round_item {
+                                width: 35px;
+                                height: 35px;
+                                margin: 7px auto;
+                                background: rgba(113, 165, 238, 1);
+                            }
+                        }
+                    }
+                }
             }
         }
     }

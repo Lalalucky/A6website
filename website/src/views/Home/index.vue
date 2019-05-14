@@ -3,26 +3,45 @@
     <div>
         <outLink></outLink>
         <Top :index="'0'"></Top>
-        <div class="banner">
-            <el-carousel :height="595+'px'" :interval='4000' class="banner_item">
-                <el-carousel-item v-for="item in banner" :key="item">
-                    <img :src="item" alt="">
-                    <router-link tag="h3" class="free_trial" to="/register">免费体验  <i class="iconfont icon-icon"></i> </router-link>
-                </el-carousel-item>
-            </el-carousel>
-        </div>
+        <Banner></Banner>
         <main>
             <WordCloud></WordCloud>
             <div class="yiEdu">
-                <div class="column"><h1 class="theme"><span></span>易教育，能为您带来什么？</h1></div>
+                <div class="column">
+                    <h1 class="theme">易教育，能为您带来什么？</h1>
+                </div>
                 <div class="sixAdv">
                     <ul class="tab">
-                        <router-link to="/home/marketing" tag="li" :class="{active:this.currentView=='marketing'}">营销</router-link>
-                        <router-link to="/home/sell" tag="li" :class="{active:this.currentView=='sell'}">销售</router-link>
-                        <router-link to="/home/bussiness" tag="li" :class="{active:this.currentView=='bussiness'}">业务</router-link>
-                        <router-link to="/home/ziyuan" tag="li" :class="{active:this.currentView=='ziyuan'}">资源</router-link>
-                        <router-link to="/home/controls" tag="li" :class="{active:this.currentView=='controls'}">管控</router-link>
-                        <router-link to="/home/education" tag="li" :class="{active:this.currentView=='education'}">继续教育</router-link>
+                        <li
+                            @mouseover="linkserver('marketing')"
+                            :class="{active:this.currentView=='marketing'}"
+                        >营销传播</li>
+                        <li
+                            @mouseover="linkserver('sell')"
+                            :class="{active:this.currentView=='sell'}"
+                        >招生转化</li>
+                        <li
+                            @mouseover="linkserver('bussiness')"
+                            :class="{active:this.currentView=='bussiness'}"
+                        >业务升级</li>
+                        <li
+                            @mouseover="linkserver('ziyuan')"
+                            :class="{active:this.currentView=='ziyuan'}"
+                        >教务教研</li>
+                        <li
+                            @mouseover="linkserver('controls')"
+                            :class="{active:this.currentView=='controls'}"
+                        >数据管控</li>
+                        <li
+                            @mouseover="linkserver('education')"
+                            :class="{active:this.currentView=='education'}"
+                        >继续教育</li>
+                        <!-- <router-link to="/home/marketing" tag="li" :class="{active:this.currentView=='marketing'}" >营销</router-link> 
+                        <router-link to="/home/sell" tag="li" :class="{active:this.currentView=='sell'}" @mouseover="linkserver('sell')">销售</router-link>
+                        <router-link to="/home/bussiness" tag="li" :class="{active:this.currentView=='bussiness'}" @mouseover="linkserver('bussiness')">业务</router-link>
+                        <router-link to="/home/ziyuan" tag="li" :class="{active:this.currentView=='ziyuan'}" @mouseover="linkserver('ziyuan')">资源</router-link>
+                        <router-link to="/home/controls" tag="li" :class="{active:this.currentView=='controls'}" @mouseover="linkserver('controls')">管控</router-link>
+                        <router-link to="/home/education" tag="li" :class="{active:this.currentView=='education'}" @mouseover="linkserver('education')">继续教育</router-link>-->
                     </ul>
                     <div class="container">
                         <router-view></router-view>
@@ -31,119 +50,46 @@
             </div>
             <YiHelper :h1="'易教育如何帮您实现机构运营全面升级'"></YiHelper>
             <YiServer></YiServer>
-            <YiJob :showTime='showTime'></YiJob>
-            <div class="yiAchi" :style="rollDataPic">
-                <h1 class="theme"><span></span> 专注，让易教育持续为伙伴提供价值</h1>
+            <YiJob :showTime="showTime"></YiJob>
+            <div class="yiAchi">
+                <h1 class="theme">专注，让易教育持续为伙伴提供价值</h1>
                 <div class="rollData">
                     <div class="grow">
-                        <h3 ref="growYear" :data-time="time" :data-value="value">6</h3>
+                        <h3 ref="growYear" :data-time="time" :data-value="value"></h3>
                         <p>
-                            <span>6</span>年专注产品打造
+                            <span v-html="this.growData.year"></span>年专注产品打造
                         </p>
                     </div>
                     <div class="grow">
-                        <h3 ref="growTimes" :data-time="time" :data-value="value">20</h3>
+                        <h3 ref="growTimes" :data-time="time" :data-value="value"></h3>
                         <p>
-                            <span>20</span>次产品功能升级
+                            <span>{{this.growData.times}}</span>次产品功能升级
                         </p>
                     </div>
                     <div class="grow">
-                        <h3 ref="growOrgNum" :data-time="time" :data-value="value">30</h3>
+                        <h3 ref="growOrgNum" :data-time="time" :data-value="value"></h3>
                         <p>
-                            <span>30</span>家机构合作伙伴
+                            <span>{{this.growData.organizations}}</span>家机构合作伙伴
                         </p>
                     </div>
                     <div class="grow">
-                        <h3 ref="growStuNum" :data-time="time" :data-value="value">720,000</h3>
+                        <div>
+                            <h3 ref="growStuNum" :data-time="time" :data-value="value"></h3>
+                            <h3>万</h3>
+                        </div>
                         <p>
-                            <span>720,000</span>位学员使用
+                            <span>{{this.growData.students}}万</span>位学员使用
                         </p>
                     </div>
                 </div>
                 <div class="konwMore">
-                    <div>免费体验 <i class="iconfont icon-icon"></i> </div>
+                    <router-link tag="div" to="/register">
+                        立即体验
+                        <i class="iconfont icon-icon"></i>
+                    </router-link>
                 </div>
             </div>
-            <div class="yiPartner">
-                <h1 class="theme"><span></span>伙伴的认同，就是最好的口碑</h1>
-                <div class="container">
-                    <el-carousel
-                        :height="450+'px'"
-                        arrow="always"
-                        :interval="4000"
-                        indicator-position="none"
-                        class="with_person"
-                    >
-                        <el-carousel-item v-for="item in with_person" :key="item">
-                            <div class="every">
-                                <div class="mankind">
-                                    <div class="photo_frame">
-                                        <img :src="item" alt="">
-                                    </div>
-                                    <p>海绵宝宝和派大星</p>
-                                    <p>快乐的源泉</p>
-                                    <p>谁不想做一只快乐的海星</p>
-                                </div>
-                                <div class="wordDisc">
-                                    准备好了吗？孩子们？ 是的，船长 太小声罗 是的，船长 哦~是谁住在深海的大菠萝里 海绵宝宝 方方黄黄伸缩自如 海绵宝宝 如果四处探险是你的愿望 海绵宝宝 那就敲敲甲板让大鱼开路 海绵宝宝 准备… 海绵宝宝，海绵宝宝，海绵宝宝，海绵宝宝♪♪♪ ♪♪♪
-                                </div>
-                            </div>
-                        </el-carousel-item>
-                    </el-carousel>
-                    <div class="cooper_display">
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/云豆.png" alt="">
-                            <img src="../../assets/images/合作伙伴/云豆0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/泰州.png" alt="">
-                            <img src="../../assets/images/合作伙伴/泰州0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/鲁班.png" alt="">
-                            <img src="../../assets/images/合作伙伴/鲁班0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/金职.png" alt="">
-                            <img src="../../assets/images/合作伙伴/金职0.png" alt="">
-                        </div>
-
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/华睿.png" alt="">
-                            <img src="../../assets/images/合作伙伴/华睿0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/通州.png" alt="">
-                            <img src="../../assets/images/合作伙伴/通州0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/南京建培.png" alt="">
-                            <img src="../../assets/images/合作伙伴/南京建培0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/易直学.png" alt="">
-                            <img src="../../assets/images/合作伙伴/易直学0.png" alt="">
-                        </div>
-
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/三成.png" alt="">
-                            <img src="../../assets/images/合作伙伴/三成0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/扬州.png" alt="">
-                            <img src="../../assets/images/合作伙伴/扬州0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/镇江.png" alt="">
-                            <img src="../../assets/images/合作伙伴/镇江0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/瑞宁.png" alt="">
-                            <img src="../../assets/images/合作伙伴/瑞宁0.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <YiPartner></YiPartner>
         </main>
         <Register></Register>
         <Footer></Footer>
@@ -151,12 +97,14 @@
 </template>
 
 <script>
-import outLink from "@/components/outsideLink.vue"
+import outLink from "@/components/outsideLink.vue";
+import Banner from "@/components/banner.vue";
 import Top from "@/components/top.vue";
 import WordCloud from "@/components/wordCloud.vue";
 import YiHelper from "@/components/yiHelper.vue";
 import YiJob from "@/components/yiJob.vue";
 import YiServer from "@/components/yiServer.vue";
+import YiPartner from "@/components/yiPartner.vue";
 import Register from "@/components/linkRegister.vue";
 import Footer from "@/components/footer.vue";
 import { mapState } from "vuex";
@@ -165,80 +113,76 @@ export default {
     name: "",
     props: {
         time: {
-            type: Number,
-            default: 2
+            // type: Number,
+            // default: 2
         },
         value: {
-            type: Number,
-            default: 720000
+            // type: Number,
+            // default: 720000
         }
     },
     data() {
         return {
-            banner:[
-                require("../../assets/images/home/banner.png"),
-                require("../../assets/images/home/indexBanner.png"),
-                ],
-            tabParams: ["营销", "销售", "业务", "资源", "管控", "继续教育"],
+            tabParams: [
+                "营销传播",
+                "招生转化",
+                "业务升级",
+                "教务教研",
+                "数据管控",
+                "继续教育"
+            ],
             nowIndex: 0,
             isShow: false,
             growData: {
-                year: 6,
-                times: 20,
-                organizations: 30,
-                students: 720000
+                year: 0,
+                times: 0,
+                organizations: 0,
+                students: 0
             },
-            currentView:'marketing',
-            showTime:false,
-            rollDataPic:{
-                backgroundImage:'url('+require('../../assets/images/home/achi.png')+')'
-            },
-            with_person:[
-                require("../../assets/images/home/with_person1.jpeg"),
-                require("../../assets/images/home/with_person2.png"),
-                require("../../assets/images/home/with_person3.jpg"),
-            ],
-            
+            currentView: "marketing",
+            showTime: false,
+            rollDataPic: {
+                backgroundImage:
+                    "url(" + require("../../assets/images/home/achi.png") + ")"
+            }
         };
     },
     components: {
         Top,
+        Banner,
         Register,
         Footer,
         WordCloud,
         YiJob,
         YiHelper,
         YiServer,
+        YiPartner,
         outLink
     },
-    created(){
+    created() {
+        //滚动数字
+        this.postRequest("v1/application/roll-number").then(res => {
+            // console.log(res)
+            this.growData.year = res.data.data.first_number;
+            this.growData.times = res.data.data.second_number;
+            this.growData.organizations = res.data.data.third_number;
+            this.growData.students = res.data.data.fourth_number;
+        });
+        // console.log(this.growData)
     },
     updated() {
         //判断的当前位于哪一个栏目
-        let currentRouter=this.$route.path;
-        this.currentView =  currentRouter.split('/').pop();
+        let currentRouter = this.$route.path;
+        this.currentView = currentRouter.split("/").pop();
     },
     mounted() {
         //绑定监听
         window.addEventListener("scroll", this.handleScroll);
-        //banner图片
-        // this.postRequest('v1/application/get_account').then(res=>{
-        //     // console.log(res)
-        // })
-        // this.postRequest('v1/application/get_account').then(res=>{
-        //     // console.log(res)
-        // })
-        // this.postRequest('v1/application/get_application').then(res=>{
-        //     console.log(res)
-        // })
-        this.axios.get('http://www.test.yunbaonet.cn/admin/v1/first-banner').then(res=>{
-            console.log(res)
-        })
     },
-    computed:{
-       ...mapState({
-           isLogin:state => state.isLogin
-       })
+    computed: {
+        ...mapState({
+            isLogin: state => state.isLogin
+        })
     },
     destroyed() {
         //离开该页面需要移除这个监听的事件
@@ -248,13 +192,28 @@ export default {
         toggleTabs(index) {
             this.nowIndex = index;
         },
+        linkserver(link) {
+            // console.log(link);
+            this.$router.push({
+                path: link,
+                query: {}
+            });
+        },
         handleScroll() {
             let scrollTop =
                 window.pageYOffset ||
                 document.documentElement.scrollTop ||
                 document.body.scrollTop;
-                // console.log(scrollTop);
-            if (scrollTop > 3800) {
+            // console.log(scrollTop);
+            let beforeHeight =
+                document.querySelector(".header").offsetHeight +
+                document.querySelector(".banner").offsetHeight +
+                document.querySelector(".word_cloud").offsetHeight +
+                document.querySelector(".yiEdu").offsetHeight +
+                document.querySelector(".yiHelp").offsetHeight +
+                document.querySelector(".yiServer").offsetHeight;
+            // console.log(beforeHeight);
+            if (scrollTop > beforeHeight) {
                 this.growNumber(this.$refs.growYear, this.growData.year);
                 this.growNumber(this.$refs.growTimes, this.growData.times);
                 this.growNumber(
@@ -268,7 +227,7 @@ export default {
                 this.$refs.growOrgNum.innerHTML = 0;
                 this.$refs.growStuNum.innerHTML = 0;
             }
-            if( scrollTop>3700 ){
+            if (scrollTop > 3700) {
                 this.showTime = true;
             }
         },
@@ -281,10 +240,9 @@ export default {
                 return;
             }
             if (Math.floor(aim / 10) <= 1) {
-                //  目标值个位数，最多五秒
                 let step = 1;
                 let current = 0;
-                let start = 0;
+                let start = 1;
                 let t = setInterval(function() {
                     start += step;
                     if (start > aim) {
@@ -296,15 +254,13 @@ export default {
                         return;
                     }
                     current = start;
-                    ele.innerHTML = current
-                        .toString()
-                        .replace(/(\d)(?=(?:\d{1}[+]?)+$)/g, "$1,");
-                }, 300);
+                    ele.innerHTML = current.toString();
+                    // .replace(/(\d)(?=(?:\d{1}[+]?)+$)/g, "$1,");
+                }, 500);
             } else if (1 < Math.floor(aim / 10) && Math.floor(aim / 10) < 20) {
-                // 目标值在10~200之间，最多四秒
-                let step = 2;
+                let step = 3;
                 let current = 0;
-                let start = 10;
+                let start = 130;
                 let t = setInterval(function() {
                     start += step;
                     if (start > aim) {
@@ -316,15 +272,13 @@ export default {
                         return;
                     }
                     current = start;
-                    ele.innerHTML = current
-                        .toString()
-                        .replace(/(\d)(?=(?:\d{2}[+]?)+$)/g, "$1,");
-                }, 150);
+                    ele.innerHTML = current.toString();
+                    // .replace(/(\d)(?=(?:\d{2}[+]?)+$)/g, "$1,");
+                }, 200);
             } else if (Math.floor(aim / 10) >= 20) {
-                // 没有其他的数值范围，考虑学员数，按照100,000，最多4秒完成
-                let step = 3800;
+                let step = 4;
                 let current = 0;
-                let start = 400000;
+                let start = 450;
                 let t = setInterval(function() {
                     start += step;
                     if (start > aim) {
@@ -336,10 +290,9 @@ export default {
                         return;
                     }
                     current = start;
-                    ele.innerHTML = current
-                        .toString()
-                        .replace(/(\d)(?=(?:\d{3}[+]?)+$)/g, "$1,");
-                }, 10);
+                    ele.innerHTML = current.toString();
+                    // .replace(/(\d)(?=(?:\d{3}[+]?)+$)/g, "$1,");
+                }, 100);
             }
         }
     }
@@ -352,7 +305,8 @@ export default {
     overflow: hidden;
     text-align: center;
     .banner_item {
-        img{
+        img {
+            display: block;
             width: 1920px;
             height: 595px;
             position: absolute;
@@ -360,9 +314,13 @@ export default {
             top: 50%;
             margin-left: -960px;
             margin-top: -297px;
-            }
+        }
         .el-carousel__item {
-            .guide{
+            a {
+                display: block;
+                height: 100%;
+            }
+            .guide {
                 position: absolute;
                 font-family: PFregular;
                 font-weight: 500;
@@ -376,17 +334,20 @@ export default {
                 position: absolute;
                 font-size: 20px;
                 top: 483px;
-                left: 50%;
-                margin-left: -53px;
+                left: 360px;
                 text-align: center;
                 color: #ffffff;
                 width: 180px;
                 height: 56px;
-                line-height: 30px;
+                line-height: 36px;
                 padding: 10px 0;
                 border-radius: 8px;
-                background:linear-gradient(180deg,rgba(255,221,135,1) 0%,rgba(246,185,84,1) 100%);
-                i:before{
+                background: linear-gradient(
+                    180deg,
+                    rgba(255, 221, 135, 1) 0%,
+                    rgba(246, 185, 84, 1) 100%
+                );
+                i:before {
                     font-size: 20px;
                 }
             }
@@ -400,25 +361,35 @@ export default {
     }
 }
 main > div {
-    & > h1 {
-        text-align: center;
-        line-height: 60px;
-        font-size: 24px;
-        margin: 30px 0;
+    position: relative;
+    &:before {
+        content: " ";
+        position: absolute;
+        top: 50px;
+        height: 40px;
+        width: 1200px;
+        margin: 0 auto;
+        background: url("~@/assets/images/zhuangshi.png") center;
+        // background-size: 100%;
     }
 }
+.word_cloud:before {
+    display: none;
+}
 .yiEdu {
-    width: 100%;
+    width: 1200px;
     padding-bottom: 45px;
-    .column{
+    margin: 0 auto;
+    .column {
         text-align: center;
     }
     .sixAdv {
         width: 100%;
         .tab {
-            width: 62.5%;
+            width: 1200px;
             margin: 0 auto;
             display: flex;
+            margin-bottom: 3px;
             flex-wrap: nowrap;
             li {
                 width: 16.6%;
@@ -429,9 +400,9 @@ main > div {
                 text-align: center;
                 font-weight: 500;
                 cursor: pointer;
-                &.active{
-                    border-bottom: 3px solid #4A90E2;
-                    color: #4A90E2;
+                &.active {
+                    border-bottom: 3px solid #4a90e2;
+                    color: #4a90e2;
                 }
             }
         }
@@ -439,7 +410,7 @@ main > div {
             width: 100%;
             margin: 0 auto;
             text-align: center;
-            &>div{
+            & > div {
                 position: relative;
                 width: 1200px;
                 height: 360px;
@@ -447,17 +418,20 @@ main > div {
                 margin-top: -2px;
                 display: flex;
                 padding: 38px 0 38px 100px;
-                background:url('~@/assets/images/home/qipao.png') no-repeat center;
+                border-radius: 10px;
+                background: url("~@/assets/images/home/qipao.png") no-repeat
+                    center;
                 background-size: contain;
-                box-shadow:4px 4px 30px 0px rgba(174,173,173,0.5);
+                box-shadow: 4px 4px 30px 0px rgba(174, 173, 173, 0.5);
             }
         }
     }
 }
 .yiAchi {
     width: 100%;
-    border-bottom: 1px solid #cccccc;
-    height: 534px;
+    // border-bottom: 1px solid #cccccc;
+    height: 600px;
+    background: url("~@/assets/images/home/achi.png") center;
     h1 {
         margin: 30px 0;
         padding: 70px;
@@ -465,12 +439,12 @@ main > div {
         line-height: 60px;
         font-size: 36px;
         color: #ffffff;
-        span{
+        span {
             background: #ffffff;
         }
     }
     .rollData {
-        width: 70%;
+        width: 1200px;
         margin: 0 auto;
         display: flex;
         color: #ffffff;
@@ -479,8 +453,10 @@ main > div {
             width: 25%;
             text-align: center;
             h3 {
-                font-size: 40px;
-                line-height: 56px;
+                display: inline-block;
+                font-size: 70px;
+                line-height: 70px;
+                height: 70px;
             }
             p {
                 padding: 30px 0;
@@ -489,136 +465,55 @@ main > div {
                 // span{}
             }
         }
-        &>.grow:not(:last-child){
+        & > .grow:not(:last-child) {
             border-right: 4px solid #ffffff;
         }
     }
     .konwMore {
         padding-top: 40px;
         div {
-            width: 180px;
-            height: 56px;
+            width: 184px;
+            height: 60px;
             color: #ffffff;
-            font-size:20px;
-            font-weight:500;
+            font-size: 20px;
+            font-weight: 500;
             box-sizing: border-box;
-            border-radius:8px;
-            margin: 20px auto;
-            line-height: 56px;
+            border-radius: 8px;
+            margin: 40px auto;
+            line-height: 60px;
             text-align: center;
             cursor: pointer;
-            background:linear-gradient(360deg,rgba(103,144,219,1) 0%,rgba(118,157,234,1) 100%);
-            i:before{
-                    font-size: 20px;
-                }
+            background: linear-gradient(
+                360deg,
+                rgba(103, 144, 219, 1) 0%,
+                rgba(74, 144, 226, 1) 100%
+            );
+            i:before {
+                font-size: 20px;
+            }
         }
+    }
+    &:before {
+        display: none;
     }
 }
-.yiPartner {
-    .container {
-        width: 62.5%;
-        margin: 0 auto;
-        .with_person {
-            .every {
-                width: 80%;
-                margin: 0 auto;
-                display: flex;
-                justify-content: space-around;
-                .mankind {
-                    width: 30%;
-                    height: 250px;
-                    .photo_frame {
-                        width: 242px;
-                        height: 250px;
-                        margin: 0 auto;
-                        border: 1px solid #cccccc;
-                        overflow: hidden;
-                        img{
-                            display: block;
-                            width: 242px;
-                            height: 250px;
-                        }
-                    }
-                    p {
-                        font-family:PFregular;
-                        text-align: center;
-                        line-height: 28px;
-                        font-size:20px;
-                    }
-                    &>p:nth-child(2){
-                        font-weight:500;
-                        color:rgba(64,64,64,1);
-                    }
-                    &>p:nth-child(3){
-                        font-weight:400;
-                        color:rgba(68,68,68,1);
-                    }
-                    &>p:nth-child(4){
-                        font-weight:400;
-                        color:rgba(68,68,68,1);
-                    }
-                }
-                .wordDisc {
-                    width: 60%;
-                    height: 320px;
-                    padding: 20px;
-                    text-indent: 1rem;
-                    background:rgba(255,255,255,1);
-                    box-shadow:0px 4px 10px 2px rgba(244,241,241,1);
-                    border-radius:16px;
-                }
-            }
-        }
-        .cooper_display{
-            display: flex;
-            height: 300px;
-            padding: 0 0 50px;
-            flex-wrap: wrap;
-            .showItem{
-                width: 25%;
-                height:80px;
-                text-align: center;
-                position: relative;
-                overflow: hidden;
-                img{
-                    position: absolute;
-                    display: block;
-                    left: 20px;
-                    transition: 600ms;
-                    transition-delay: 200ms;
-                }
-                img:nth-child(1){
-                    top: -100px;
-                    z-index: 100;
-                }
-                img:nth-child(2){
-                    top: 0px;
-                    z-index: 100;
-                }
-                &:hover img:nth-child(1){
-                    top: 0;
-                }
-                &:hover img:nth-child(2){
-                    top:80px;
-                }
-            }
-        }
-    }
+.yiPartner:before {
+    display: none;
 }
 </style>
 <style>
-.with_person .el-carousel__arrow.el-carousel__arrow--left{
+.with_person .el-carousel__arrow.el-carousel__arrow--left {
     left: 0;
     top: 185px;
     width: 60px;
     height: 120px;
-    background:url('~@/assets/images/home/left.png') no-repeat center;
+    background: url("~@/assets/images/home/left.png") no-repeat center;
 }
-.with_person .el-carousel__arrow.el-carousel__arrow--right{
+.with_person .el-carousel__arrow.el-carousel__arrow--right {
     right: 0;
     top: 185px;
     width: 60px;
     height: 120px;
-    background:url('~@/assets/images/home/right.png') no-repeat center;
+    background: url("~@/assets/images/home/right.png") no-repeat center;
 }
 </style>

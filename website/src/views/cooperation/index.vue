@@ -1,16 +1,30 @@
 <template>
     <div class="coopration">
+        <outLink></outLink>
         <Top :index="'4'"></Top>
-        <imgDisplay :msg="'#606060'"></imgDisplay>
+        <Banner></Banner>
         <div class="new_partner">
             <h1 class="theme">新签客户</h1>
             <div class="container">
-                <div class="item" v-for="item in 3" :key="item">
-                    <img src alt>
+                <div class="item">
+                    <img src="@/assets/images/合作伙伴/新签客户1.png" alt>
                     <div class="school_info">
-                        <p class="come_from">XX校长</p>
-                        <p class="come_from">XX教育机构</p>
-                        <p class="words">云宝不错</p>
+                        <p class="come_from">黄永飞</p>
+                        <p class="mechism_name">江硕教育</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="@/assets/images/合作伙伴/新签客户2.png" alt>
+                    <div class="school_info">
+                        <p class="come_from">冯均贺</p>
+                        <p class="mechism_name">南极瑞宁教育</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="@/assets/images/合作伙伴/新签客户3.png" alt>
+                    <div class="school_info">
+                        <p class="come_from">张斌</p>
+                        <p class="mechism_name">巨宏学校校长</p>
                     </div>
                 </div>
             </div>
@@ -19,57 +33,69 @@
             <h1 class="theme">合作客户</h1>
             <div class="container">
                 <div class="cooper_display">
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/云豆.png" alt="">
-                            <img src="../../assets/images/合作伙伴/云豆0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/泰州.png" alt="">
-                            <img src="../../assets/images/合作伙伴/泰州0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/鲁班.png" alt="">
-                            <img src="../../assets/images/合作伙伴/鲁班0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/金职.png" alt="">
-                            <img src="../../assets/images/合作伙伴/金职0.png" alt="">
-                        </div>
-
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/华睿.png" alt="">
-                            <img src="../../assets/images/合作伙伴/华睿0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/通州.png" alt="">
-                            <img src="../../assets/images/合作伙伴/通州0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/南京建培.png" alt="">
-                            <img src="../../assets/images/合作伙伴/南京建培0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/易直学.png" alt="">
-                            <img src="../../assets/images/合作伙伴/易直学0.png" alt="">
-                        </div>
-
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/三成.png" alt="">
-                            <img src="../../assets/images/合作伙伴/三成0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/扬州.png" alt="">
-                            <img src="../../assets/images/合作伙伴/扬州0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/镇江.png" alt="">
-                            <img src="../../assets/images/合作伙伴/镇江0.png" alt="">
-                        </div>
-                        <div class="showItem">
-                            <img src="../../assets/images/合作伙伴/瑞宁.png" alt="">
-                            <img src="../../assets/images/合作伙伴/瑞宁0.png" alt="">
-                        </div>
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/云豆.png" alt>
+                        <img src="@/assets/images/cooper/云豆fade.png" alt>
                     </div>
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/泰州.png" alt>
+                        <img src="@/assets/images/cooper/泰州fade.png" alt>
+                    </div>
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/鲁班.png" alt>
+                        <img src="@/assets/images/cooper/鲁班fade.png" alt>
+                    </div>
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/金职.png" alt>
+                        <img src="@/assets/images/cooper/金职fade.png" alt>
+                    </div>
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/英才.png" alt>
+                        <img src="@/assets/images/cooper/英才fade.png" alt>
+                    </div>
+
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/华睿.png" alt>
+                        <img src="@/assets/images/cooper/华睿fade.png" alt>
+                    </div>
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/通州.png" alt>
+                        <img src="@/assets/images/cooper/通州fade.png" alt>
+                    </div>
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/建培.png" alt>
+                        <img src="@/assets/images/cooper/建培fade.png" alt>
+                    </div>
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/易直学.png" alt>
+                        <img src="@/assets/images/cooper/易直学fade.png" alt>
+                    </div>
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/泥瓦匠.png" alt>
+                        <img src="@/assets/images/cooper/泥瓦匠fade.png" alt>
+                    </div>
+
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/三诚.png" alt>
+                        <img src="@/assets/images/cooper/三诚fade.png" alt>
+                    </div>
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/扬州.png" alt>
+                        <img src="@/assets/images/cooper/扬州fade.png" alt>
+                    </div>
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/镇江.png" alt>
+                        <img src="@/assets/images/cooper/镇江fade.png" alt>
+                    </div>
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/瑞宁.png" alt>
+                        <img src="@/assets/images/cooper/瑞宁fade.png" alt>
+                    </div>
+                    <div class="showItem">
+                        <img src="@/assets/images/cooper/江硕.png" alt>
+                        <img src="@/assets/images/cooper/江硕fade.png" alt>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="school_master">
@@ -80,18 +106,19 @@
                 indicator-position="none"
                 class="with_person"
             >
-                <el-carousel-item v-for="item in with_person" :key="item">
+                <el-carousel-item v-for="item in with_person" :key="item.id">
                     <div class="every">
                         <div class="mankind">
                             <div class="photo_frame">
-                                <img :src="item" alt="">
+                                <img :src="item.img" alt>
                             </div>
-                            <p>海绵宝宝和派大星</p>
-                            <p>快乐的源泉</p>
-                            <p>谁不想做一只快乐的海星</p>
+                            <p class="name">{{item.name}}</p>
+                            <p class="description">{{item.description}}</p>
+                            <p></p>
                         </div>
                         <div class="wordDisc">
-                            准备好了吗？孩子们？ 是的，船长 太小声罗 是的，船长 哦~是谁住在深海的大菠萝里 海绵宝宝 方方黄黄伸缩自如 海绵宝宝 如果四处探险是你的愿望 海绵宝宝 那就敲敲甲板让大鱼开路 海绵宝宝 准备… 海绵宝宝，海绵宝宝，海绵宝宝，海绵宝宝♪♪♪ ♪♪♪
+                            <p>{{item.remark}}</p>
+                            <!-- <img :src="item.img" alt> -->
                         </div>
                     </div>
                 </el-carousel-item>
@@ -103,26 +130,29 @@
 </template>
 
 <script>
+import outLink from "@/components/outsideLink.vue";
+import Banner from "@/components/banner.vue";
 import Top from "@/components/top.vue";
-import imgDisplay from "@/components/imgDisplay.vue";
-import Register from "@/components/linkRegister.vue"; 
+import Register from "@/components/linkRegister.vue";
 import Footer from "@/components/footer.vue";
 export default {
     name: "",
     data() {
         return {
-            with_person:[
-                require("../../assets/images/home/with_person1.jpeg"),
-                require("../../assets/images/home/with_person2.png"),
-                require("../../assets/images/home/with_person3.jpg"),
-            ]
+            with_person: []
         };
     },
     components: {
         Top,
-        imgDisplay,
         Register,
-        Footer
+        Footer,
+        outLink,
+        Banner
+    },
+    mounted() {
+        this.postRequest("v1/application/partner-case").then(res => {
+            this.with_person = res.data.data;
+        });
     }
 };
 </script>
@@ -150,43 +180,75 @@ export default {
                 p {
                     text-align: center;
                 }
+                .come_from {
+                    height: 28px;
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: rgba(64, 64, 64, 1);
+                    line-height: 28px;
+                }
+                .mechism_name {
+                    font-size: 18px;
+                    color: rgba(68, 68, 68, 1);
+                    line-height: 25px;
+                }
             }
-            .cooper_display{
+            .cooper_display {
                 width: 100%;
                 display: flex;
                 height: 300px;
                 padding: 0 0 50px;
                 flex-wrap: wrap;
-                .showItem{
-                    width: 25%;
-                    height:60px;
+                .showItem {
+                    width: 20%;
+                    height: 80px;
                     text-align: center;
                     position: relative;
-                    img{
+                    overflow: hidden;
+                    .special {
+                        height: 60px;
+                        left: 70px;
+                    }
+                    img {
                         position: absolute;
-                        top: 0;
-                        left: 50%;
-                        margin-left: -80px;
-                    }
-                    img:nth-child(1){
-                        display: none;
-                        z-index: 100;
-                    }
-                    &:hover img:nth-child(1){
                         display: block;
+                        left: 35px;
                     }
-                    &:hover img:nth-child(2){
-                        display: none;
+                    img:nth-child(1) {
+                        top: -100px;
+                        z-index: 5;
+                    }
+                    img:nth-child(2) {
+                        top: 0px;
+                        z-index: 5;
+                    }
+                    &:hover img:nth-child(1) {
+                        top: 0;
+                    }
+                    &:hover img:nth-child(2) {
+                        top: 80px;
                     }
                 }
             }
         }
     }
-    .school_master{
-        width: 100%;
-        .with_person {
+    .older_partner {
+        position: relative;
+        &:before {
+            content: " ";
+            position: absolute;
+            top: 50px;
+            height: 40px;
             width: 1200px;
             margin: 0 auto;
+            background: url("~@/assets/images/zhuangshi.png") center;
+            // background-size: 100%;
+        }
+    }
+    .school_master {
+        width: 1200px;
+        margin: 0 auto;
+        .with_person {
             .every {
                 width: 80%;
                 margin: 0 auto;
@@ -199,37 +261,70 @@ export default {
                         width: 242px;
                         height: 250px;
                         margin: 0 auto;
-                        border: 1px solid #cccccc;
+                        // border: 1px solid #cccccc;
                         overflow: hidden;
-                        img{
+                        img {
                             display: block;
-                            width: 242px;
-                            height: 250px;
+                            width: 210px;
+                            margin: 0 auto;
+                            height: 220px;
+                            box-shadow: 0px 0px 10px 0px rgba(218, 219, 220, 1);
+                            border-radius: 8px;
+                            margin-top: 5px;
                         }
                     }
                     p {
-                        font-family:PFregular;
+                        font-family: PFregular;
                         text-align: center;
                         line-height: 28px;
-                        font-size:20px;
+                        font-size: 20px;
                     }
-                    &>p:nth-child(2){
-                        font-weight:500;
-                        color:rgba(64,64,64,1);
+                    .name {
+                        margin-top: 20px;
+                        font-size: 22px;
+                        font-weight: 500;
+                        color: rgba(64, 64, 64, 1);
+                        line-height: 30px;
                     }
-                    &>p:nth-child(3){
-                        font-weight:400;
-                        color:rgba(68,68,68,1);
+                    .description {
+                        font-size: 20px;
+                        font-weight: 400;
+                        color: rgba(68, 68, 68, 1);
                     }
-                    &>p:nth-child(4){
-                        font-weight:400;
-                        color:rgba(68,68,68,1);
+                    & > p:nth-child(2) {
+                        font-weight: 500;
+                        color: rgba(64, 64, 64, 1);
+                    }
+                    & > p:nth-child(3) {
+                        font-weight: 400;
+                        color: rgba(68, 68, 68, 1);
+                    }
+                    & > p:nth-child(4) {
+                        font-weight: 400;
+                        color: rgba(68, 68, 68, 1);
                     }
                 }
                 .wordDisc {
-                    width: 60%;
-                    height: 400px;
-                    text-indent: 1rem;
+                    width: 712px;
+                    height: 320px;
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: rgba(102, 102, 102, 1);
+                    line-height: 28px;
+                    padding: 30px 20px;
+                    background: rgba(255, 255, 255, 1);
+                    box-shadow: 0px 0px 10px 0px rgba(218, 219, 220, 1);
+                    margin-top: 5px;
+                    border-radius: 16px;
+                    display: flex;
+                    justify-content: space-around;
+                    p {
+                        width: 100%;
+                    }
+                    // img {
+                    //     width: 120px;
+                    //     height: 120px;
+                    // }
                 }
             }
         }
