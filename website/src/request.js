@@ -1,31 +1,31 @@
 import axios from 'axios'
 
 
-// //拦截器
-// axios.interceptors.request.use((config) => {
-//     // 接口请求可在此处统一处理
-//     return config
-// }, (err) => {
-//     // 接口请求出错可在此处统一处理
-//     return Promise.resolve(err)
-// })
+//拦截器
+axios.interceptors.request.use((config) => {
+    // 接口请求可在此处统一处理
+    return config
+}, (err) => {
+    // 接口请求出错可在此处统一处理
+    return Promise.resolve(err)
+})
 
 
-// //拦截器
-// axios.interceptors.response.use((data) => {
-//     // 数据统一校验处理
-//     return data
-// }, (err) => {
-//     // 数据异常统一处理 例如
-//     if (err.response.status === 504 || err.response.status === 404) {
-//         // console.log('服务器被吃了')
-//     } else if (err.response.status === 403) {
-//         console.log('权限不足,请联系管理员')
-//     } else {
-//         console.log('未知错误')
-//     }
-//     return Promise.resolve(err)
-// })
+//拦截器
+axios.interceptors.response.use((data) => {
+    // 数据统一校验处理
+    return data
+}, (err) => {
+    // 数据异常统一处理 例如
+    if (err.response.status === 504 || err.response.status === 404) {
+        // console.log('服务器被吃了')
+    } else if (err.response.status === 403) {
+        console.log('权限不足,请联系管理员')
+    } else {
+        console.log('未知错误')
+    }
+    return Promise.resolve(err)
+})
 
 //post方法
 export function postRequest(url, params) {

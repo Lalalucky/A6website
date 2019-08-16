@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bef52ed0-c4b0-45f7-bcd3-033c7f699f4c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/website/.history/public/index_20190412110746.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/public/index_20190416150137.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/public/index_20190416152331.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/public/index_20190416153936.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190410135510.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190410135522.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190410135659.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190410135832.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190410140050.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190410152322.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190410152337.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411155003.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411155134.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411155231.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411155251.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411155313.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411155559.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411155718.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411155728.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411155756.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411155837.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411155858.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411155926.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411155949.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160008.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160019.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160103.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160111.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160115.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160129.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160152.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160223.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160314.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160409.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160436.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160532.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160606.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160651.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160713.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160731.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160754.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160815.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160914.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160927.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160936.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411160956.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411161313.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411161346.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411161356.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411161410.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411161512.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411161608.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411161731.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411161750.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411161824.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411161858.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411161916.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411161938.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411161945.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411162002.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411162027.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411162143.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411162154.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411162234.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411162257.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411162341.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411162350.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190411162401.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416165445.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416165608.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416165806.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416165814.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416165921.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416165938.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416165947.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416165953.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416170023.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416170033.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416170040.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416170047.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416170157.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416170204.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416170431.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416170759.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416171137.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416171346.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416171358.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416171428.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416171503.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416171540.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416171652.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416171724.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416171759.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416171838.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416171911.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172009.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172101.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172155.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172327.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172330.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172339.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172402.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172413.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172432.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172502.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172537.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172549.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172631.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172700.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172745.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172801.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172815.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172856.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416172916.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173030.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173107.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173128.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173155.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173212.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173230.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173232.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173313.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173328.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173601.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173613.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173720.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173751.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173838.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416173929.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174001.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174039.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174202.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174209.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174257.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174338.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174356.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174434.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174500.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174515.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174531.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174649.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174658.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174720.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174743.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174758.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174804.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174812.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/footer_20190416174846.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409094458.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409103326.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409165214.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409165533.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409165651.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409165704.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409165718.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409165722.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409165726.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409165747.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409165841.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409165848.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409165905.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409170006.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409170344.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409170424.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409170438.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409170504.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409170508.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409170520.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409170541.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409170620.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409170626.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409170732.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409170924.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409170944.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409171014.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409171237.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409172212.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409172828.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409172910.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409172938.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409173113.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409173332.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409173428.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409173505.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409173624.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409173747.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409173819.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409174135.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409174225.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409174325.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409174359.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409174502.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409174547.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409174649.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409174816.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409174859.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409174917.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409175014.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409175032.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409175311.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409175438.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409175456.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190409175802.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190410085352.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190410091940.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190410144840.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190410145216.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190410152233.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411164408.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411164528.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411164731.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411164852.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411164907.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411165040.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411165048.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411165316.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411165338.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411165507.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411165525.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411174625.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411174718.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411174902.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411175030.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411175033.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411175050.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411175147.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411175151.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411175157.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411175245.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411175251.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411175317.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411175335.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411175347.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411175505.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411175536.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411175755.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411180208.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411180229.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411180238.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411180316.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411180345.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411180354.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411180406.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411180432.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411180527.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411180546.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411180614.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411180629.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411180706.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiJob_20190411181329.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409094509.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409103335.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409135200.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409135218.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140215.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140231.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140437.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140512.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140556.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140655.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140725.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140737.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140755.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140818.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140825.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140834.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140859.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140921.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140940.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409140952.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141037.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141048.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141140.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141211.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141250.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141307.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141413.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141416.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141513.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141521.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141748.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141758.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141827.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141837.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141857.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141922.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409141937.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409142019.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409142052.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409142803.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409142809.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409142829.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409142916.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409142930.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409143011.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409143019.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409143118.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409143149.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409145106.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409145147.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409145308.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409145333.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409145352.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409145415.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409145459.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409145520.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409145546.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409145625.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409145707.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409150015.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409150043.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409150114.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409150327.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409150401.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409152349.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409152535.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409152547.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409153035.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409153123.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409161651.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409162419.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409162451.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409162507.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409162520.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409162557.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409162705.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409162721.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409162812.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409162909.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409162915.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409162954.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409163005.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409163017.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409163131.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409163201.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190409171152.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190410144848.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190410145220.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/components/yiServer_20190410152238.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190328085022.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190328105338.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190328105340.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190328105435.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190328105449.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190328134037.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190328134051.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190328134117.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190328134139.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190328135637.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190328135700.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190328135828.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401111728.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401112507.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401112538.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401112549.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401113909.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401114020.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401114104.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401114106.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401114132.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401114146.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401114153.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401114346.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401114403.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401114409.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401114419.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401114501.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401114713.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401114749.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190401114923.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403121108.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403121200.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403121222.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403121231.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403121244.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403121257.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403121319.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403121340.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403121711.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403121934.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403122127.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403133947.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403134237.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403134258.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403134318.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403134332.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190403134349.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190409113821.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190415145028.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190415145117.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190417111333.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/router_20190417111550.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415145912.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415145952.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150056.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150203.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150210.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150227.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150239.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150331.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150342.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150426.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150436.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150445.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150527.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150536.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150705.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150742.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190415150833.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190417145401.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190417145424.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190417145454.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190417145615.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190417145914.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/index_20190417150751.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/replace_20190417145534.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.history/src/views/contactUs/replace_20190417145555.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/dist.zip" beforeDir="false" afterPath="$PROJECT_DIR$/website/dist.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/components/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/components/banner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/components/banner.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/components/outsideLink.vue" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/components/outsideLink.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/components/yiJob.vue" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/components/yiJob.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/components/yiServer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/components/yiServer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/views/contactUs/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/views/contactUs/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/views/contactUs/replace.vue" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/views/contactUs/replace.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/vue.config.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/website/src/components/outsideLink.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" column="77" lean-forward="true" selection-start-line="7" selection-start-column="77" selection-end-line="7" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>400-</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\Users\YunBao_PC\Desktop\A6website\website</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/website/src/components/outsideLink.vue" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1928" />
+    <option name="y" value="-8" />
+    <option name="width" value="1932" />
+    <option name="height" value="986" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="A6website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="A6website" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="A6website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="A6website" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="A6website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="A6website" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="A6website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="A6website" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="C:\Users\YunBao_PC\Desktop\A6website\website\node_modules\eslint" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bef52ed0-c4b0-45f7-bcd3-033c7f699f4c" name="Default Changelist" comment="" />
+      <created>1561451058213</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561451058213</updated>
+      <workItem from="1561451059424" duration="270000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="270000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15351813" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/website/.history/src/components/outsideLink_20190416160212.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/components/outsideLink.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="77" lean-forward="true" selection-start-line="7" selection-start-column="77" selection-end-line="7" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

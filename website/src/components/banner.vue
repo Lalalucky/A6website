@@ -5,7 +5,7 @@
                 <a :href="item.url">
                     <div class="imgbox">
                         <img :src="item.img" alt>
-                        <router-link
+                        <!-- <router-link
                             tag="h3"
                             class="free_trial"
                             to="/register"
@@ -13,7 +13,14 @@
                         >
                             立即体验
                             <i class="iconfont icon-icon"></i>
-                        </router-link>
+                        </router-link>-->
+                        <!-- ---------------------跳转到易教育A6的官网-------------------------------- -->
+                        <h3 class="free_trial" v-show="item.is_button && item.is_button==1">
+                            <a href="http://www.yunbaonet.cn/?yijiaoyu=true" target="_blank">
+                                立即体验
+                                <i class="iconfont icon-icon"></i>
+                            </a>
+                        </h3>
                     </div>
                 </a>
             </el-carousel-item>
@@ -43,6 +50,11 @@ export default {
             this.postRequest("v1/application/first-banner").then(res => {
                 this.banner = res.data.data;
             });
+        }
+    },
+    methods: {
+        outReg() {
+            localStorage.setItem("yijiaoyu", true);
         }
     },
     components: {}
@@ -116,6 +128,12 @@ export default {
                     rgba(255, 221, 135, 1) 0%,
                     rgba(246, 185, 84, 1) 100%
                 );
+                a {
+                    display: block;
+                    cursor: pointer;
+                    background: transparent;
+                    color: white;
+                }
                 i:before {
                     font-size: 20px;
                 }

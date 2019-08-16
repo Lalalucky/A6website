@@ -93,10 +93,16 @@
             </div>
         </div>
         <div class="knowMore">
-            <router-link tag="div" class="free_trial" to="/register">
+            <!-- <router-link tag="div" class="free_trial" to="/register">
                 立即体验
                 <i class="iconfont icon-icon"></i>
-            </router-link>
+            </router-link>-->
+            <div class="free_trial">
+                <a href="http://www.yunbaonet.cn/?yijiaoyu=true" target="_blank">
+                    立即体验
+                    <i class="iconfont icon-icon"></i>
+                </a>
+            </div>
         </div>
     </div>
 </template>
@@ -190,6 +196,12 @@ export default {
             cursor: pointer;
             // background:linear-gradient(360deg,rgba(103,144,219,1) 0%,rgba(118,157,234,1) 100%);
             background: transparent;
+            a {
+                display: block;
+                cursor: pointer;
+                background: transparent;
+                color: rgba(74, 144, 226, 1);
+            }
             img {
                 vertical-align: text-bottom;
             }
@@ -199,6 +211,9 @@ export default {
             &:hover {
                 background: rgba(74, 144, 226, 1);
                 color: #ffffff;
+                a {
+                    color: #ffffff;
+                }
             }
         }
     }

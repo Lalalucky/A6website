@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /network/index.html [L]  // 注意：这个目录是你设置存放vue上线文件的目录/phptest/index.html
